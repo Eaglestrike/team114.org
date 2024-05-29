@@ -4,7 +4,7 @@ import AboutPage from "@/app/about/page";
 
 export default function Home() {
   return (
-    <main>
+    <main className={"bg-black text-white"}>
       <IntroSection />
         <AboutPage />
     </main>
