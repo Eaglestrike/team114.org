@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
     <body className={inter.className}>
-        <nav className={"flex flex-row justify-end gap-x-5 text-white p-4 bg-slate-900 bg-opacity-95"}>
+        <nav className={"flex flex-row justify-end gap-x-5 text-white p-4 bg-slate-900 bg-opacity-95 uppercase font-semibold"}>
             <a href="/">Home</a>
             <a href="/about">About</a>
         </nav>
