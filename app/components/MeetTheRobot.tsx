@@ -9,9 +9,9 @@ export default function MeetTheRobot() {
             </div>
             <p className={"text-sm font-mono uppercase text-gray-500 mt-2"}>OUR 2024 ROBOT</p>
             <div
-                className={"relative h-96 rounded-3xl mx-20 my-10 border-2 border-black hover:border-blue-500"}>
+                className={"relative h-96 rounded-3xl my-10 border-2 border-black hover:border-red-500 mx-auto md:w-1/2"}>
                 <a href={"/snoopy"}>
-                    <Image src={"/robot\ shadow.jpg"} alt={"robot"} fill={true} objectFit={"contain"}/>
+                    <Image src={"/robot\ shadow.jpg"} alt={"robot"} fill={true} objectFit={"contain"} className={"rounded-3xl"}/>
                 </a>
             </div>
             <div className={"flex flex-col sm:flex-row justify-evenly gap-x-8 gap-y-4 sm:gap-y-0 w-3/4 mx-auto"}>
