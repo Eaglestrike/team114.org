@@ -6,7 +6,7 @@ export default function AboutBlurb() {
             <p className={"my-2 text-4xl font-bold text-left mb-5"}>About Us</p>
             <div className={"flex flex-col sm:flex-row h-96 gap-x-4 sm:gap-y-4"}>
                 <div className={"relative flex-1"}>
-                    <Image src={"/robotwork.jpg"} alt={"robotwork"} fill={true} objectFit={"contain"} />
+                    <Image src={"/robotwork.jpg"} alt={"robotwork"} fill={true} style={{objectFit: 'contain'}} />
                 </div>
                 <div className={"flex-1 max-w-xl sm:text-xl mt-4 sm:mt-0"}>
                     Team 114, also known as Eaglestrike, is the official robotics team of Los Altos High School. Founded

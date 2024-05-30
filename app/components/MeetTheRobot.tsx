@@ -11,7 +11,7 @@ export default function MeetTheRobot() {
             <div
                 className={"relative h-96 rounded-3xl my-10 border-2 border-black hover:border-red-500 mx-auto md:w-1/2"}>
                 <a href={"/snoopy"}>
-                    <Image src={"/robot\ shadow.jpg"} alt={"robot"} fill={true} objectFit={"contain"} className={"rounded-3xl"}/>
+                    <Image src={"/robot\ shadow.jpg"} alt={"robot"} fill={true} className={"rounded-3xl"} style={{objectFit: 'contain'}}/>
                 </a>
             </div>
             <div className={"flex flex-col sm:flex-row justify-evenly gap-x-8 gap-y-4 sm:gap-y-0 w-3/4 mx-auto"}>
