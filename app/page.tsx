@@ -1,14 +1,14 @@
-import Image from "next/image";
-import IntroSection from "@/app/components/IntroSection";
-import AboutBlurb from "@/app/components/AboutBlurb";
-import MeetTheRobot from "@/app/components/MeetTheRobot";
+import Image from 'next/image';
+import IntroSection from '@/app/components/IntroSection';
+import AboutBlurb from '@/app/components/AboutBlurb';
+import MeetTheRobot from '@/app/components/MeetTheRobot';
 
 export default function Home() {
-  return (
-    <main className={"bg-black text-white"}>
-        <IntroSection />
-        <AboutBlurb />
-        <MeetTheRobot />
-    </main>
-  );
+	return (
+		<main className={'bg-black text-white'}>
+			<IntroSection />
+			<AboutBlurb />
+			<MeetTheRobot />
+		</main>
+	);
 }

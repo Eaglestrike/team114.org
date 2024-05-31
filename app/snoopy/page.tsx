@@ -1,9 +1,8 @@
-
 export default function SnoopyPage() {
-    return (
-        <div>
-            <p>Snoopy</p>
-            <div></div>
-        </div>
-    )
+	return (
+		<div>
+			<p>Snoopy</p>
+			<div></div>
+		</div>
+	);
 }
