@@ -1,7 +1,7 @@
 import {bronzeSponsors, goldSponsors, inKindSponsors, partners, silverSponsors} from "@/app/data/sponsorsData";
 import Image from "next/image";
 
-function SectionTitle({title, color}) {
+function SectionTitle({title, color}: { title: string, color: string }) {
     return (
         <p className={`text-4xl my-4 mt-10 ml-4 font-bold text-${color}`}>{title}</p>
     )
