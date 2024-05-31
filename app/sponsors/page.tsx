@@ -11,7 +11,7 @@ export default function SponsorsPage() {
         <div>
             <p className={"text-5xl m-4 pb-6"}>Sponsors</p>
             <div className={"p-4 bg-slate-900 m-4 rounded-2xl"}>
-                <p className={"text-center font-semibold"}>Team 114 would not be possible without the generous donation of our sponsors.</p>
+                <p className={"text-center font-semibold text-white"}>Team 114 would not be possible without the generous donation of our sponsors.</p>
             </div>
             <div id={"partners"}>
                 <SectionTitle title={"Partners ($5000+)"} color={"rose-600"}/>
@@ -27,7 +27,7 @@ export default function SponsorsPage() {
             <div id={"gold"}>
                 {/*<p className={"text-4xl text-yellow-500 font-bold"}>Gold ($2500-$4999)</p>*/}
                 <SectionTitle title={"Gold ($2500-$4999)"} color={"yellow-500"}/>
-                <div className={"flex flex-row overflow-auto gap-x-8 max-w-4xl mx-auto"}>
+                <div className={"flex flex-row flex-grow overflow-visible gap-x-8 max-w-4xl mx-auto"}>
                     {goldSponsors.map((partner) => (
                         <a key={partner.name} href={partner.website}
                            className={"relative h-40 bg-white mx-auto w-3/4 rounded-3xl flex items-center justify-center m-4 p-4 border-4 hover:border-yellow-500 hover:scale-110 duration-300 ease-in-out"}>
@@ -54,7 +54,7 @@ export default function SponsorsPage() {
                 <div className={"flex flex-row overflow-auto gap-x-8"}>
                     {bronzeSponsors.map((partner) => (
                         <a key={partner.name} href={partner.website}
-                           className={"bg-white mx-auto w-1/3 rounded-3xl flex items-center justify-center p-4"}>
+                           className={"bg-white mx-auto w-1/3 rounded-3xl flex items-center justify-center m-4 p-4 border-4 hover:border-amber-600 hover:scale-110 duration-300 ease-in-out"}>
                             <Image src={"/sponsors/" + partner.logo} alt={partner.name} width={200} height={300} className={"my-auto"}/>
                         </a>
                     ))}
@@ -63,11 +63,11 @@ export default function SponsorsPage() {
 
             <div id={"in-kind"}>
                 {/*<p className={"text-4xl text-white font-bold"}>In-Kind</p>*/}
-                <SectionTitle title={"In-Kind"} color={"white"}/>
+                <SectionTitle title={"In-Kind"} color={"gray-400"}/>
                 <div className={"flex flex-row overflow-auto gap-x-8"}>
                     {inKindSponsors.map((partner) => (
                         <a key={partner.name} href={partner.website}
-                           className={"bg-white mx-auto w-1/3 rounded-3xl flex items-center justify-center p-4"}>
+                           className={"bg-white mx-auto w-1/3 rounded-3xl flex items-center justify-center p-4 hover:scale-110 duration-300 ease-in-out"}>
                             <Image src={"/sponsors/" + partner.logo} alt={partner.name} width={200} height={300}/>
                         </a>
                     ))}
