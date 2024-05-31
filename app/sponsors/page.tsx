@@ -6,6 +6,7 @@ function SectionTitle({title, color}: { title: string, color: string }) {
         <p className={`text-4xl my-4 mt-10 ml-4 font-bold text-${color}`}>{title}</p>
     )
 }
+
 export default function SponsorsPage() {
     return (
         <div>
