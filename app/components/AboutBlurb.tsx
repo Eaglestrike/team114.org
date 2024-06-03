@@ -22,7 +22,7 @@ export default function AboutBlurb() {
                     initial={{x: 500}}
                     whileInView={{x: 0}}
                     transition={{
-                        duration: 0.4, delay: 0, ease: "easeOut", once:'true'
+                        duration: 0.5, delay: 0, ease: "easeOut", once:'true',
                     }}
                 >
                     <p className={"pt-7 mb-8 text-4xl font-bold text-left"}>About Us</p>
