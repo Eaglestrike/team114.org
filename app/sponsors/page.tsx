@@ -105,7 +105,7 @@ export default function SponsorsPage() {
 							key={partner.name}
 							href={partner.website}
 							className={
-								'bg-white mx-auto w-1/3 rounded-3xl flex items-center justify-center p-4 hover:scale-110 duration-300 ease-in-out'
+								'bg-white mx-auto w-1/3 rounded-3xl flex items-center justify-center m-4 p-4 hover:scale-110 duration-300 ease-in-out'
 							}
 						>
 							<Image src={'/sponsors/' + partner.logo} alt={partner.name} width={200} height={300} />
