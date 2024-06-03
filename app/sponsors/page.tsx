@@ -11,7 +11,7 @@ export default function SponsorsPage() {
 			<p className={'text-5xl m-4 pb-6'}>Sponsors</p>
 			<div className={'p-4 bg-slate-900 m-4 rounded-md max-w-6xl mx-auto'}>
 				<p className={'text-center text-3xl text-white'}>
-					Team 114 would not be possible without the generous donation of our sponsors.
+					Team 114 would not be possible without the generous support of our sponsors.
 				</p>
 				<p className={'text-center text-white mt-2'}>
 					Interested? Read more here: <a href={'https://docs.google.com/document/d/1bZPDlrVWRtjtCxCHdrQo8Cva77OVnZ_W/edit'} className={'underline hover:text-blue-500'}>Sponsorship Prospectus</a>
