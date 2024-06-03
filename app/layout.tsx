@@ -1,13 +1,17 @@
+"use client";
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { GoogleTagManager } from '@next/third-parties/google'
+import { usePathname } from 'next/navigation';
 
 const inter = Inter({ subsets: ['latin'] });
 
-export const metadata: Metadata = {
-	title: 'EagleStrike',
-	description: 'Official page of the Team114 FRC team',
+const urlMap = {
+	'/': 'Home',
+	'/about': 'About',
+	'/snoopy': 'Snoopy',
+	'/sponsors': 'Sponsors',
 };
 
 export default function RootLayout({
@@ -15,6 +19,7 @@ export default function RootLayout({
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
+	const pathname = usePathname();
 	return (
 		<html lang="en">
 		<GoogleTagManager gtmId="G-DTSRV8YCHM" />
@@ -24,10 +29,13 @@ export default function RootLayout({
 						'flex flex-row justify-end gap-x-5 text-white p-4 bg-slate-900 bg-opacity-95 uppercase font-semibold'
 					}
 				>
-					<a href="/">Home</a>
-					<a href="/about">About</a>
-					<a href="/snoopy">Snoopy</a>
-					<a href="/sponsors">Sponsors</a>
+					{
+						Object.entries(urlMap).map(([url, name]) => (
+							<a
+								className={pathname === url ? 'underline' : ''}
+								key={url} href={url}>{name}</a>
+						))
+					}
 				</nav>
 				{children}
 			</body>
