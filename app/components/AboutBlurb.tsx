@@ -6,12 +6,12 @@ import { motion } from 'framer-motion';
 export default function AboutBlurb() {
 	// @ts-ignore
 	return (
-		<div className={'px-10 flex-row py-10 bg-slate-900'}>
+		<div className={'px-10 flex-row py-10 bg-slate-900 w-sreen'}>
 			<div className={'flex flex-col sm:flex-row h-96 gap-x-4 sm:gap-y-4'}>
 				<div className={'relative flex-1'}>
 					<Image
-						src={'/team114.jpg'}
-						alt={'robotwork'}
+						src={'/team_114.jpg'}
+						alt={'team114'}
 						fill={true}
 						style={{ objectFit: 'contain' }}
 						quality={100}
@@ -21,7 +21,7 @@ export default function AboutBlurb() {
 				<motion.div
 					className={`flex-1 max-w-xl sm:text-xl mt-4 sm:mt-0`}
 					style={{ justifyContent: 'flex-start' }}
-					initial={{ x: 500 }}
+					initial={{ x: 100 }}
 					whileInView={{ x: 0 }}
 					transition={{
 						duration: 0.4,
@@ -32,9 +32,7 @@ export default function AboutBlurb() {
 				>
 					<p className={'pt-7 mb-8 text-4xl font-bold text-left'}>About Us</p>
 					<p>
-						Team 114, also known as Eaglestrike, is the official robotics team of Los Altos High School.
-						Founded in 1997, Eaglestrike was one of the first teams to be part of the FIRST Robotics
-						Competition (FRC) series.
+						Team 114, also known as Eaglestrike, is the official robotics team of Los Altos High School. Founded in 1997, Eaglestrike was one of the first teams to be part of the FIRST Robotics Competition (FRC) series.
 					</p>
 				</motion.div>
 			</div>

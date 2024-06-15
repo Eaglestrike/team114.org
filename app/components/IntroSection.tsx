@@ -2,10 +2,10 @@ import Image from 'next/image';
 
 export default function IntroSection() {
 	return (
-		<section className={'bg-blue-600 p-10 w-screen text-white'}>
+		<section className={'bg-blue-600 pt-24 pb-10 px-8 w-screen text-white'}>
 			<div className={'flex flex-col items-center'}>
-				<Image src={'/eagle.png'} alt={'Eagle'} width={200} height={200} />
-				<p className={'uppercase text-center mt-10 mb-6 text-5xl font-extrabold'}>EagleStrike</p>
+				<Image src={'/eagle.png'} alt={'Eagle'} width={300} height={300} />
+				<p className={'uppercase text-center mt-10 mb-6 text-6xl font-extrabold tracking-widest font-mono'}>EagleStrike</p>
 				<div className={'flex flex-row justify-center gap-x-4 mt-4'}>
 					<a className={''} href={'https://www.facebook.com/114eaglestrike'}>
 						<svg

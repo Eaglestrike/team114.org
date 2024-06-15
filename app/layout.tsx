@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-
+import Nav from "@/app/components/Nav";
+import Footer from "@/app/components/Footer"
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
@@ -17,17 +18,21 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={inter.className}>
-				<nav
-					className={
-						'flex flex-row justify-end gap-x-5 text-white p-4 bg-slate-900 bg-opacity-95 uppercase font-semibold'
-					}
-				>
-					<a href="/">Home</a>
-					<a href="/about">About</a>
-					<a href="/snoopy">Snoopy</a>
-					<a href="/sponsors">Sponsors</a>
-				</nav>
+				{/*<div className={'w-screen fixed bg-slate-900 z-40 border-2 border-black'}>*/}
+				{/*	<nav*/}
+				{/*		className={*/}
+				{/*			'flex flex-row justify-end gap-x-5 text-white p-4 bg-slate-900 bg-opacity-95 uppercase font-semibold'*/}
+				{/*		}*/}
+				{/*	>*/}
+				{/*		<a href="/">Home</a>*/}
+				{/*		<a href="/about">About</a>*/}
+				{/*		<a href="/snoopy">Snoopy</a>*/}
+				{/*		<a href="/sponsors">Sponsors</a>*/}
+				{/*	</nav>*/}
+				{/*</div>*/}
+				<Nav />
 				{children}
+				{/*<Footer />*/}
 			</body>
 		</html>
 	);

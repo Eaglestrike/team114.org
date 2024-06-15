@@ -7,7 +7,7 @@ function SectionTitle({ title, color }: { title: string; color: string }) {
 
 export default function SponsorsPage() {
 	return (
-		<div>
+		<div className={'pt-12'}>
 			<p className={'text-5xl m-4 pb-6'}>Sponsors</p>
 			<div className={'p-4 bg-slate-900 m-4 rounded-2xl'}>
 				<p className={'text-center font-semibold text-white'}>
@@ -96,7 +96,7 @@ export default function SponsorsPage() {
 			<div id={'in-kind'}>
 				{/*<p className={"text-4xl text-white font-bold"}>In-Kind</p>*/}
 				<SectionTitle title={'In-Kind'} color={'gray-400'} />
-				<div className={'flex flex-row overflow-auto gap-x-8'}>
+				<div className={'flex flex-row overflow-auto gap-x-8 mb-6'}>
 					{inKindSponsors.map((partner) => (
 						<a
 							key={partner.name}
