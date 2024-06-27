@@ -1,6 +1,6 @@
 "use client"
 import {motion} from "framer-motion";
-import {useState, useEffect, useRef} from "react";
+import {useState, useEffect} from "react";
 
 export default function Nav() {
     const [lastScrollY, setLastScrollY] = useState(0);
