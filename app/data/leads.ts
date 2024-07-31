@@ -15,7 +15,7 @@ const leads=[
     {image: "/eaglework.jpeg", role: "Code Lead", name: "Sunayna Singh"},
     {image: "/eaglework.jpeg", role: "CNC Lead", name: "Bryce Lin"},
     {image: "/eaglework.jpeg", role: "Prototyping Lead", name: "Zoe Cheng"},
-    {image: "/eaglework.jpeg", role: "Machining Lead", name: "Ben Samek?"},
+    {image: "/eaglework.jpeg", role: "Machining Lead", name: "Ben Samek"},
     {image: "/eaglework.jpeg", role: "New Member Lead", name: "Aaron Zhu"},
     {image: "/eaglework.jpeg", role: "Sponsorship Lead", name: "Lea Radovanovic"},
 ];

@@ -15,14 +15,11 @@ export default function Nav() {
             setLastScrollY(window.scrollY);
         }
     };
-
     useEffect(() => {
-        if (typeof window !== 'undefined') {
-            window.addEventListener('scroll', handleScroll);
-            return () => {
-                window.removeEventListener('scroll', handleScroll);
-            };
-        }
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
     }, [lastScrollY]);
 
     return(
@@ -33,14 +30,14 @@ export default function Nav() {
         >
             <nav
                 className={
-                    'flex flex-row justify-end gap-x-5 text-white p-4 bg-slate-800 bg-opacity-95 uppercase font-semibold border-slate-400'
+                    'flex flex-row justify-end gap-x-5  p-4 bg-slate-800 bg-opacity-95  border-slate-400' +
+                    'uppercase text-white font-semibold'
                 }
             >
-
-                <a href="/" className={"hover:text-sky-300 hover:font-extrabold"}>Home</a>
-                <a href="/about" className={"hover:text-sky-300 hover:font-extrabold"}>About</a>
-                <a href="/snoopy" className={"hover:text-sky-300 hover:font-extrabold"}>Snoopy</a>
-                <a href="/sponsors" className={"hover:text-sky-300 hover:font-extrabold"}>Sponsors</a>
+                <a href="/" className={"hover:text-sky-300 hover:font-extrabold hover:drop-shadow-lg"}>Home</a>
+                <a href="/about" className={"hover:text-blue-300 hover:font-extrabold"}>About</a>
+                <a href="/snoopy" className={"hover:text-blue-300 hover:font-extrabold"}>Snoopy</a>
+                <a href="/sponsors" className={"hover:text-blue-300 hover:font-extrabold"}>Sponsors</a>
             </nav>
         </motion.div>)
 }

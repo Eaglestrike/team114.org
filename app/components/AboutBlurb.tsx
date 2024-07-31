@@ -36,6 +36,7 @@ export default function AboutBlurb() {
 					</p>
 				</motion.div>
 			</div>
+
 			<div className={'w-full justify-end flex mt-4'}>
 				<a
 					className={

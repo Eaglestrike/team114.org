@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import {motion} from "framer-motion";
-import {string} from "prop-types";
+
 
 export default function Carousel () {
     const sources = [
@@ -10,15 +9,14 @@ export default function Carousel () {
         {description: "Climb", image: "/Z62_8742.jpg"},
         {description: "Gang Signs", image: "/Z62_9413 (1).jpg"},
         {description: "alliance selection", image: "/Z62_9717.jpg"},
-
     ];
 
     return(
-            <div className={"border-y-4 border-blue-400 justify-self-center w-screen h-f bg-slate-800 overflow-x-scroll scroll snap-x snap-always snap-mandatory flex"}>
+            <div className={"border-y-2 p-2 border-blue-400 justify-self-center w-screen bg-slate-100 overflow-x-auto scroll snap-x snap-always snap-mandatory snap-center flex flex-1"}>
                 {sources.map((source,index) => (
-                    <div className={"snap-center px-6 border-4 h-full shrink-0"} key={index}>
-                        <Image height={'800'} width={'800'} src={"/team_pics"+source.image} alt={source.description}
-                               className={"object-cover"} quality={100}/>
+                    <div className={"snap-center mx-2 w-1/2 flex-none"} key={index}>
+                        <Image height={'2000'} width={'2000'} src={"/team_pics" + source.image} alt={source.description}
+                               className={"object-cover rounded-2xl"} quality={80}/>
                     </div>
                 ))}
             </div>
