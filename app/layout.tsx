@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import Nav from "@/app/components/Nav";
-import Footer from "@/app/components/Footer"
+import Nav from '@/app/components/Nav';
+import Footer from '@/app/components/Footer';
 import { inter } from './fonts';
 
 export const metadata: Metadata = {

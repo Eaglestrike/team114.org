@@ -14,13 +14,19 @@ export default function SponsorsPage() {
 					Team 114 would not be possible without the generous support of our sponsors.
 				</p>
 				<p className={'text-center text-white mt-2'}>
-					Interested? Read more here: <a href={'https://docs.google.com/document/d/1bZPDlrVWRtjtCxCHdrQo8Cva77OVnZ_W/edit'} className={'underline hover:text-blue-500'}>Sponsorship Prospectus</a>
+					Interested? Read more here:{' '}
+					<a
+						href={'https://docs.google.com/document/d/1bZPDlrVWRtjtCxCHdrQo8Cva77OVnZ_W/edit'}
+						className={'underline hover:text-blue-500'}
+					>
+						Sponsorship Prospectus
+					</a>
 				</p>
 			</div>
 			<div id={'partners'}>
 				<SectionTitle title={'Partners ($5000+)'} color={'rose-600'} />
 				<div className={'grid grid-cols-2 gap-x-8 p-4'}>
-				{partners.map((partner) => (
+					{partners.map((partner) => (
 						<a
 							key={partner.name}
 							href={partner.website}

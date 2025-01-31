@@ -1,8 +1,9 @@
-import Pardon from "@/app/components/Pardon";
+import Pardon from '@/app/components/Pardon';
+
 export default function SnoopyPage() {
 	return (
 		<div>
-				<Pardon />
+			<Pardon />
 		</div>
 	);
 }
