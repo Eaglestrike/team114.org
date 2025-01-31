@@ -1,10 +1,10 @@
 "use client"
-import {motion} from "framer-motion";
-import {useState, useEffect} from "react";
+import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 
 export default function Nav() {
     const [lastScrollY, setLastScrollY] = useState(0);
-    const [y,setY] = useState(0);
+    const [y, setY] = useState(0);
     const handleScroll = () => {
         if (typeof window !== 'undefined') {
             if (window.scrollY > lastScrollY) {
@@ -22,10 +22,10 @@ export default function Nav() {
         };
     }, [lastScrollY]);
 
-    return(
+    return (
         <motion.div
-            className={'w-screen fixed bg-slate-900 z-40 border-b-2'}
-            animate={{y}}
+            className={'w-full fixed bg-slate-900 z-40 border-b-2'}
+            animate={{ y }}
             transition={{ ease: "easeOut", duration: 0.7 }}
         >
             <nav
@@ -39,5 +39,6 @@ export default function Nav() {
                 <a href="/snoopy" className={"hover:text-blue-300 hover:font-extrabold"}>Snoopy</a>
                 <a href="/sponsors" className={"hover:text-blue-300 hover:font-extrabold"}>Sponsors</a>
             </nav>
-        </motion.div>)
+        </motion.div>
+    )
 }

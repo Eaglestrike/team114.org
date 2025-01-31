@@ -4,9 +4,8 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 
 export default function AboutBlurb() {
-	// @ts-ignore
 	return (
-		<div className={'px-10 flex-row py-10 bg-slate-900 w-sreen'}>
+		<section className={'px-10 flex-row py-10'}>
 			<div className={'flex flex-col sm:flex-row h-96 gap-x-4 sm:gap-y-4'}>
 				<div className={'relative flex-1'}>
 					<Image
@@ -60,6 +59,6 @@ export default function AboutBlurb() {
 					</svg>
 				</a>
 			</div>
-		</div>
+		</section>
 	);
 }

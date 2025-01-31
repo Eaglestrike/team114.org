@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function MeetTheRobot() {
 	return (
-		<div className={'p-8'}>
+		<section className={'p-8'}>
 			<div className={'flex flex-row gap-x-2'}>
 				<p className={'uppercase font-semibold'}>Meet</p>
 				<p className={'text-4xl font-mono'}>SN00PY</p>
@@ -62,6 +62,6 @@ export default function MeetTheRobot() {
 					<p className={'flex-1 font-bold pt-4 text-center'}>Student Built. Always.</p>
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 }
