@@ -9,7 +9,7 @@ export default function SponsorsPage() {
 	return (
 		<div className={'pt-12'}>
 			<p className={'text-5xl m-4 pb-6'}>Sponsors</p>
-			<div className={'p-4 bg-slate-900 m-4 rounded-md max-w-6xl mx-auto'}>
+			<div className={'p-4 bg-slate-900 m-4 rounded-3xlo max-w-6xl mx-auto'}>
 				<p className={'text-center text-3xl text-white'}>
 					Team 114 would not be possible without the generous support of our sponsors.
 				</p>
