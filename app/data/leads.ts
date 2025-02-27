@@ -18,6 +18,7 @@ const leads = [
 	{ image: '/eaglework.jpeg', role: 'Machining Lead', name: 'Ben Samek' },
 	{ image: '/eaglework.jpeg', role: 'New Member Lead', name: 'Aaron Zhu' },
 	{ image: '/eaglework.jpeg', role: 'Sponsorship Lead', name: 'Lea Radovanovic' },
+	{ image: '/eaglework.jpeg', role: 'Assembly Lead', name: 'James Doyas' },
 ];
 
 export { captains, leads };
