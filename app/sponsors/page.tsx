@@ -1,124 +1,150 @@
-import { bronzeSponsors, goldSponsors, inKindSponsors, partners, silverSponsors } from '@/app/data/sponsorsData';
-import Image from 'next/image';
+"use client"
+import Image from "next/image"
+import Link from "next/link"
+import { bronzeSponsors, goldSponsors, inKindSponsors, partners, silverSponsors } from "@/app/data/sponsorsData"
 
-function SectionTitle({ title, color }: { title: string; color: string }) {
-	return <p className={`text-4xl my-4 mt-10 ml-4 font-bold text-${color}`}>{title}</p>;
+function SectionTitle({ title, colorClass }: { title: string; colorClass: string }) {
+    return (
+        <div className="relative py-4 mb-8">
+            <h2 className={`text-3xl md:text-4xl font-bold ${colorClass}`}>{title}</h2>
+            <div className={`absolute bottom-0 left-0 h-1 w-24 ${colorClass.replace("text-", "bg-")} rounded-full`}></div>
+        </div>
+    )
+}
+
+function SponsorCard({
+    sponsor,
+    tier,
+    size = "medium",
+}: {
+    sponsor: { name: string; logo: string; website: string }
+    tier: "partner" | "gold" | "silver" | "bronze" | "inkind"
+    size?: "small" | "medium" | "large"
+}) {
+    const tierStyles = {
+        partner: {
+            border: "hover:border-rose-600",
+            scale: "hover:scale-105",
+            bgHover: "hover:bg-rose-50",
+        },
+        gold: {
+            border: "hover:border-yellow-500",
+            scale: "hover:scale-105",
+            bgHover: "hover:bg-yellow-50",
+        },
+        silver: {
+            border: "hover:border-gray-400",
+            scale: "hover:scale-105",
+            bgHover: "hover:bg-gray-50",
+        },
+        bronze: {
+            border: "hover:border-amber-600",
+            scale: "hover:scale-105",
+            bgHover: "hover:bg-amber-50",
+        },
+        inkind: {
+            border: "hover:border-gray-400",
+            scale: "hover:scale-105",
+            bgHover: "hover:bg-gray-50",
+        },
+    }
+
+    const sizeClasses = {
+        small: "h-24 md:h-32",
+        medium: "h-32 md:h-40",
+        large: "h-40 md:h-56",
+    }
+
+    return (
+        <Link
+            href={sponsor.website || "#"}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`
+        relative ${sizeClasses[size]} bg-white rounded-xl flex items-center justify-center p-4 
+        border-2 transition-all duration-300 shadow-md
+        ${tierStyles[tier].border} ${tierStyles[tier].scale} ${tierStyles[tier].bgHover}
+      `}
+        >
+            <div className="relative w-full h-full">
+                <Image
+                    src={`/sponsors/${sponsor.logo}`}
+                    alt={`${sponsor.name} logo`}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="object-contain p-2"
+                />
+            </div>
+        </Link>
+    )
 }
 
 export default function SponsorsPage() {
-	return (
-		<div className={'pt-12'}>
-			<p className={'text-5xl m-4 pb-6'}>Sponsors</p>
-			<div className={'p-4 bg-slate-900 m-4 rounded-md max-w-6xl mx-auto'}>
-				<p className={'text-center text-3xl text-white'}>
-					Team 114 would not be possible without the generous support of our sponsors.
-				</p>
-				<p className={'text-center text-white mt-2'}>
-					Interested? Read more here:{' '}
-					<a
-						href={'https://docs.google.com/document/d/1bZPDlrVWRtjtCxCHdrQo8Cva77OVnZ_W/edit'}
-						className={'underline hover:text-blue-500'}
-					>
-						Sponsorship Prospectus
-					</a>
-				</p>
-			</div>
-			<div id={'partners'}>
-				<SectionTitle title={'Partners ($5000+)'} color={'rose-600'} />
-				<div className={'grid grid-cols-2 gap-x-8 p-4'}>
-					{partners.map((partner) => (
-						<a
-							key={partner.name}
-							href={partner.website}
-							className={
-								'relative aspect-square max-h-72 bg-white mx-auto w-3/4 rounded-3xl flex items-center justify-center m-4 p-8 border-4 hover:border-red-500 hover:scale-125 duration-300 ease-in-out'
-							}
-						>
-							<Image
-								src={'/sponsors/' + partner.logo}
-								alt={partner.name}
-								fill={true}
-								style={{ objectFit: 'contain' }}
-							/>
-						</a>
-					))}
-				</div>
-			</div>
-			<div id={'gold'}>
-				{/*<p className={"text-4xl text-yellow-500 font-bold"}>Gold ($2500-$4999)</p>*/}
-				<SectionTitle title={'Gold ($2500-$4999)'} color={'yellow-500'} />
-				<div className={'flex flex-row flex-grow overflow-visible gap-x-8 max-w-4xl mx-auto'}>
-					{goldSponsors.map((partner) => (
-						<a
-							key={partner.name}
-							href={partner.website}
-							className={
-								'relative h-40 bg-white mx-auto w-3/4 rounded-3xl flex items-center justify-center m-4 p-4 border-4 hover:border-yellow-500 hover:scale-110 duration-300 ease-in-out'
-							}
-						>
-							<Image src={'/sponsors/' + partner.logo} alt={partner.name} width={200} height={300} />
-						</a>
-					))}
-				</div>
-			</div>
-			<div id={'silver'}>
-				{/*<p className={"text-4xl text-gray-400 font-bold"}>Silver ($1000-$2499)</p>*/}
-				<SectionTitle title={'Silver ($1000-$2499)'} color={'gray-400'} />
-				<div className={'flex flex-row overflow-auto gap-x-8'}>
-					{silverSponsors.map((partner) => (
-						<a
-							key={partner.name}
-							href={partner.website}
-							className={
-								'relative h-40 bg-white mx-auto w-3/4 rounded-3xl flex items-center justify-center m-4 p-4 border-4 hover:border-gray-400 hover:scale-110 duration-300 ease-in-out'
-							}
-						>
-							<Image src={'/sponsors/' + partner.logo} alt={partner.name} width={200} height={300} />
-						</a>
-					))}
-				</div>
-			</div>
-			<div id={'bronze'}>
-				{/*<p className={"text-4xl text-amber-600 font-bold"}>Bronze ($0-$1000)</p>*/}
-				<SectionTitle title={'Bronze ($0-$1000)'} color={'amber-600'} />
-				<div className={'flex flex-row overflow-auto gap-x-8'}>
-					{bronzeSponsors.map((partner) => (
-						<a
-							key={partner.name}
-							href={partner.website}
-							className={
-								'bg-white mx-auto w-1/3 rounded-3xl flex items-center justify-center m-4 p-4 border-4 hover:border-amber-600 hover:scale-110 duration-300 ease-in-out'
-							}
-						>
-							<Image
-								src={'/sponsors/' + partner.logo}
-								alt={partner.name}
-								width={200}
-								height={300}
-								className={'my-auto'}
-							/>
-						</a>
-					))}
-				</div>
-			</div>
+    return (
+        <div className="min-h-screen bg-slate-900 py-24 px-4 md:px-8">
+            <div className="max-w-7xl mx-auto">
+                <div className="mb-12">
+                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8">Our Sponsors</h1>
 
-			<div id={'in-kind'}>
-				{/*<p className={"text-4xl text-white font-bold"}>In-Kind</p>*/}
-				<SectionTitle title={'In-Kind'} color={'gray-400'} />
-				<div className={'flex flex-row overflow-auto gap-x-8 mb-6'}>
-					{inKindSponsors.map((partner) => (
-						<a
-							key={partner.name}
-							href={partner.website}
-							className={
-								'bg-white mx-auto w-1/3 rounded-3xl flex items-center justify-center m-4 p-4 hover:scale-110 duration-300 ease-in-out'
-							}
-						>
-							<Image src={'/sponsors/' + partner.logo} alt={partner.name} width={200} height={300} />
-						</a>
-					))}
-				</div>
-			</div>
-		</div>
-	);
+                    <div className="rounded-xl p-6 md:p-8 shadow-xl mb-12 bg-gradient-to-br from-blue-400 to-blue-500">
+                        <h2 className="text-2xl md:text-3xl text-white text-center font-medium mb-4">
+                            Team 114 would not be possible without the generous support of our sponsors.
+                        </h2>
+                        <p className="text-center text-white text-lg">
+                            Interested in becoming a sponsor?{" "}
+                            <a
+                                href="https://docs.google.com/document/d/1bZPDlrVWRtjtCxCHdrQo8Cva77OVnZ_W/edit"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="underline font-medium transition-colors text-white hover:text-gray-200"
+                            >
+                                Read our Sponsorship Prospectus
+                            </a>
+                        </p>
+                    </div>
+                </div>
+                <section className="mb-16" id="partners">
+                    <SectionTitle title="Partners ($5000+)" colorClass="text-rose-600" />
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                        {partners.map((partner) => (
+                            <SponsorCard key={partner.name} sponsor={partner} tier="partner" size="large" />
+                        ))}
+                    </div>
+                </section>
+                <section className="mb-16" id="gold">
+                    <SectionTitle title="Gold ($2500-$4999)" colorClass="text-yellow-500" />
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {goldSponsors.map((sponsor) => (
+                            <SponsorCard key={sponsor.name} sponsor={sponsor} tier="gold" />
+                        ))}
+                    </div>
+                </section>
+                <section className="mb-16" id="silver">
+                    <SectionTitle title="Silver ($1000-$2499)" colorClass="text-gray-400" />
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+                        {silverSponsors.map((sponsor) => (
+                            <SponsorCard key={sponsor.name} sponsor={sponsor} tier="silver" />
+                        ))}
+                    </div>
+                </section>
+                <section className="mb-16" id="bronze">
+                    <SectionTitle title="Bronze ($0-$1000)" colorClass="text-amber-600" />
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+                        {bronzeSponsors.map((sponsor) => (
+                            <SponsorCard key={sponsor.name} sponsor={sponsor} tier="bronze" size="small" />
+                        ))}
+                    </div>
+                </section>
+                <section className="mb-16" id="in-kind">
+                    <SectionTitle title="In-Kind Sponsors" colorClass="text-gray-400" />
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+                        {inKindSponsors.map((sponsor) => (
+                            <SponsorCard key={sponsor.name} sponsor={sponsor} tier="inkind" size="small" />
+                        ))}
+                    </div>
+                </section>
+            </div>
+        </div>
+    )
 }
+
