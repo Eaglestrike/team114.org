@@ -25,99 +25,108 @@ export default function SponsorsPage() {
 			</div>
 			<div id={'partners'}>
 				<SectionTitle title={'Partners ($5000+)'} color={'rose-600'} />
-				<div className={'grid grid-cols-2 gap-x-8 p-4'}>
-					{partners.map((partner) => (
-						<a
-							key={partner.name}
-							href={partner.website}
-							className={
-								'relative aspect-square max-h-72 bg-white mx-auto w-3/4 rounded-3xl flex items-center justify-center m-4 p-8 border-4 hover:border-red-500 hover:scale-125 duration-300 ease-in-out'
-							}
-						>
-							<Image
-								src={'/sponsors/' + partner.logo}
-								alt={partner.name}
-								fill={true}
-								style={{ objectFit: 'contain' }}
-							/>
-						</a>
-					))}
-				</div>
+				{partners && partners.length ?
+					( <div className={'flex flex-row flex-grow overflow-visible gap-x-8 max-w-4xl mx-auto'}>{partners.map((partner) => (
+							<a
+								key={partner.name}
+								href={partner.website}
+								className={
+									'relative h-40 bg-white mx-auto w-3/4 rounded-3xl flex items-center justify-center m-4 p-4 border-4 hover:border-yellow-500 hover:scale-110 duration-300 ease-in-out'
+								}
+							>
+								<Image src={'/sponsors/' + partner.logo} alt={partner.name} width={200} height={300} />
+							</a>
+
+						)) }</div>
+					)
+					:
+					(<text className={"p-5 text-center font-bol text-3xl"}>Become the first Partner Today!</text>)
+				}
 			</div>
 			<div id={'gold'}>
 				{/*<p className={"text-4xl text-yellow-500 font-bold"}>Gold ($2500-$4999)</p>*/}
 				<SectionTitle title={'Gold ($2500-$4999)'} color={'yellow-500'} />
-				<div className={'flex flex-row flex-grow overflow-visible gap-x-8 max-w-4xl mx-auto'}>
-					{goldSponsors.map((partner) => (
-						<a
-							key={partner.name}
-							href={partner.website}
-							className={
-								'relative h-40 bg-white mx-auto w-3/4 rounded-3xl flex items-center justify-center m-4 p-4 border-4 hover:border-yellow-500 hover:scale-110 duration-300 ease-in-out'
-							}
-						>
-							<Image src={'/sponsors/' + partner.logo} alt={partner.name} width={200} height={300} />
-						</a>
-					))}
-				</div>
+				{goldSponsors && goldSponsors.length>0 ?
+					( <div className={'flex flex-row flex-grow overflow-visible gap-x-8 max-w-4xl mx-auto'}>{goldSponsors.map((partner) => (
+							<a
+								key={partner.name}
+								href={partner.website}
+								className={
+									'relative h-40 bg-white mx-auto w-3/4 rounded-3xl flex items-center justify-center m-4 p-4 border-4 hover:border-yellow-500 hover:scale-110 duration-300 ease-in-out'
+								}
+							>
+								<Image src={'/sponsors/' + partner.logo} alt={partner.name} width={200} height={300} />
+							</a>
+
+						)) }</div>
+					)
+					:
+					(<text className={"p-5 text-center font-bol text-3xl"}>Become the first Gold Sponsor Today!</text>)
+				}
 			</div>
 			<div id={'silver'}>
 				{/*<p className={"text-4xl text-gray-400 font-bold"}>Silver ($1000-$2499)</p>*/}
 				<SectionTitle title={'Silver ($1000-$2499)'} color={'gray-400'} />
-				<div className={'flex flex-row overflow-auto gap-x-8'}>
-					{silverSponsors.map((partner) => (
-						<a
-							key={partner.name}
-							href={partner.website}
-							className={
-								'relative h-40 bg-white mx-auto w-3/4 rounded-3xl flex items-center justify-center m-4 p-4 border-4 hover:border-gray-400 hover:scale-110 duration-300 ease-in-out'
-							}
-						>
-							<Image src={'/sponsors/' + partner.logo} alt={partner.name} width={200} height={300} />
-						</a>
-					))}
-				</div>
+				{silverSponsors && silverSponsors.length>0 ?
+					( <div className={'flex flex-row flex-grow overflow-visible gap-x-8 max-w-4xl mx-auto'}>{silverSponsors.map((partner) => (
+							<a
+								key={partner.name}
+								href={partner.website}
+								className={
+									'relative h-40 bg-white mx-auto w-3/4 rounded-3xl flex items-center justify-center m-4 p-4 border-4 hover:border-yellow-500 hover:scale-110 duration-300 ease-in-out'
+								}
+							>
+								<Image src={'/sponsors/' + partner.logo} alt={partner.name} width={200} height={300} />
+							</a>
+
+							)) }</div>
+					)
+					:
+					(<text className={"p-5 text-center font-bol text-3xl"}>Become the first Silver Sponsor Today!</text>)
+				}
 			</div>
 			<div id={'bronze'}>
 				{/*<p className={"text-4xl text-amber-600 font-bold"}>Bronze ($0-$1000)</p>*/}
 				<SectionTitle title={'Bronze ($0-$1000)'} color={'amber-600'} />
-				<div className={'flex flex-row overflow-auto gap-x-8'}>
-					{bronzeSponsors.map((partner) => (
-						<a
-							key={partner.name}
-							href={partner.website}
-							className={
-								'bg-white mx-auto w-1/3 rounded-3xl flex items-center justify-center m-4 p-4 border-4 hover:border-amber-600 hover:scale-110 duration-300 ease-in-out'
-							}
-						>
-							<Image
-								src={'/sponsors/' + partner.logo}
-								alt={partner.name}
-								width={200}
-								height={300}
-								className={'my-auto'}
-							/>
-						</a>
-					))}
-				</div>
+				{bronzeSponsors && bronzeSponsors.length>0 ?
+					( <div className={'flex flex-row flex-grow overflow-visible gap-x-8 max-w-4xl mx-auto'}>{bronzeSponsors.map((partner) => (
+							<a
+								key={partner.name}
+								href={partner.website}
+								className={
+									'relative h-40 bg-white mx-auto w-3/4 rounded-3xl flex items-center justify-center m-4 p-4 border-4 hover:border-yellow-500 hover:scale-110 duration-300 ease-in-out'
+								}
+							>
+								<Image src={'/sponsors/' + partner.logo} alt={partner.name} width={200} height={300} />
+							</a>
+
+						)) }</div>
+					)
+					:
+					(<text className={"p-5 text-center font-bol text-3xl"}>Become the first Bronze Sponsor Today!</text>)
+				}
 			</div>
 
 			<div id={'in-kind'}>
 				{/*<p className={"text-4xl text-white font-bold"}>In-Kind</p>*/}
 				<SectionTitle title={'In-Kind'} color={'gray-400'} />
-				<div className={'flex flex-row overflow-auto gap-x-8 mb-6'}>
-					{inKindSponsors.map((partner) => (
-						<a
-							key={partner.name}
-							href={partner.website}
-							className={
-								'bg-white mx-auto w-1/3 rounded-3xl flex items-center justify-center m-4 p-4 hover:scale-110 duration-300 ease-in-out'
-							}
-						>
-							<Image src={'/sponsors/' + partner.logo} alt={partner.name} width={200} height={300} />
-						</a>
-					))}
-				</div>
+				{inKindSponsors && inKindSponsors.length > 0 ?
+					( <div className={'flex flex-row flex-grow overflow-visible gap-x-8 max-w-4xl mx-auto'}>{inKindSponsors.map((partner) => (
+							<a
+								key={partner.name}
+								href={partner.website}
+								className={
+									'relative h-40 bg-white mx-auto w-3/4 rounded-3xl flex items-center justify-center m-4 p-4 border-4 hover:border-yellow-500 hover:scale-110 duration-300 ease-in-out'
+								}
+							>
+								<Image src={'/sponsors/' + partner.logo} alt={partner.name} width={200} height={300} />
+							</a>
+
+						)) }</div>
+					)
+					:
+					(<text className={"p-5 text-center font-bol text-3xl"}>Become the first in kind Sponsor Today!</text>)
+				}
 			</div>
 		</div>
 	);

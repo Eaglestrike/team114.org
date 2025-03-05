@@ -31,7 +31,7 @@ export default function RootLayout({
 				{/*</div>*/}
 				<Nav />
 				{children}
-				{/*<Footer />*/}
+				<Footer />
 			</body>
 		</html>
 	);
