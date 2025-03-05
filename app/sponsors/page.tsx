@@ -105,43 +105,50 @@ export default function SponsorsPage() {
                 </div>
                 <section className="mb-16" id="partners">
                     <SectionTitle title="Partners ($5000+)" colorClass="text-rose-600" />
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                    {partners ?
+                        (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                         {partners.map((partner) => (
                             <SponsorCard key={partner.name} sponsor={partner} tier="partner" size="large" />
                         ))}
-                    </div>
+                    </div>) : (<text className={"text-white text-3xl font-bold"}>Become the first Partner Today!</text>)}
                 </section>
                 <section className="mb-16" id="gold">
                     <SectionTitle title="Gold ($2500-$4999)" colorClass="text-yellow-500" />
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {goldSponsors.map((sponsor) => (
-                            <SponsorCard key={sponsor.name} sponsor={sponsor} tier="gold" />
-                        ))}
-                    </div>
+                    {goldSponsors && goldSponsors.length ?
+                        (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                            {goldSponsors.map((partner) => (
+                                <SponsorCard key={partner.name} sponsor={partner} tier="partner" size="large" />
+                            ))}
+                        </div>)
+                        :
+                        (<text className={"text-white text-3xl font-bold"}>Become the first Gold Sponsor Today!</text>)}
                 </section>
                 <section className="mb-16" id="silver">
                     <SectionTitle title="Silver ($1000-$2499)" colorClass="text-gray-400" />
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-                        {silverSponsors.map((sponsor) => (
-                            <SponsorCard key={sponsor.name} sponsor={sponsor} tier="silver" />
-                        ))}
-                    </div>
+                    {silverSponsors && silverSponsors.length ?
+                        (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                            {silverSponsors.map((partner) => (
+                                <SponsorCard key={partner.name} sponsor={partner} tier="partner" size="large" />
+                            ))}
+                        </div>) : (<text className={"text-white text-3xl font-bold"}>Become the first Silver Sponsor Today!</text>)}
                 </section>
                 <section className="mb-16" id="bronze">
                     <SectionTitle title="Bronze ($0-$1000)" colorClass="text-amber-600" />
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-                        {bronzeSponsors.map((sponsor) => (
-                            <SponsorCard key={sponsor.name} sponsor={sponsor} tier="bronze" size="small" />
-                        ))}
-                    </div>
+                    {bronzeSponsors && bronzeSponsors.length ?
+                        (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                            {bronzeSponsors.map((partner) => (
+                                <SponsorCard key={partner.name} sponsor={partner} tier="partner" size="large" />
+                            ))}
+                        </div>) : (<text className={"text-white text-3xl font-bold"}>Become the first Bronze Sponsor Today!</text>)}
                 </section>
                 <section className="mb-16" id="in-kind">
                     <SectionTitle title="In-Kind Sponsors" colorClass="text-gray-400" />
-                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-                        {inKindSponsors.map((sponsor) => (
-                            <SponsorCard key={sponsor.name} sponsor={sponsor} tier="inkind" size="small" />
-                        ))}
-                    </div>
+                    {inKindSponsors && inKindSponsors.length ?
+                        (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                            {inKindSponsors.map((partner) => (
+                                <SponsorCard key={partner.name} sponsor={partner} tier="partner" size="large" />
+                            ))}
+                        </div>) : (<text className={"text-white text-3xl font-bold"}>Become the first in kind Sponsor Today!</text>)}
                 </section>
             </div>
         </div>
