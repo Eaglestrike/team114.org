@@ -5,10 +5,10 @@ import Carousel from '@/app/components/Carousel';
 
 export default function AboutPage() {
 	return (
-		<div className={'bg-slate-700 pb-14 '}>
+		<div className={'bg-slate-700 pb-14 py-10'}>
 			{/*<Pardon />*/}
 			{/* h-screen w-full overflow-y-scroll overscroll-auto snap-y snap-always snap-mandatory*/}
-			<p className={'text-7xl font-semibold text-white bg-slate-900 h-72 pt-28 pb-20'}>About Us</p>
+			{/* <p className={'text-7xl font-semibold text-white bg-slate-900 h-72 pt-28 pb-20'}>About Us</p> */}
 			{/*<div className={'gap-y-2'}>*/}
 			{/*	/!*<div className={'h-5/6'}>*!/*/}
 			{/*	/!*	<TextMove*!/*/}
