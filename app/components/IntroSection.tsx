@@ -1,11 +1,12 @@
 import Image from 'next/image';
+import { foughtKnight } from '../fonts';
 
 export default function IntroSection() {
 	return (
-		<section className={'bg-blue-600 pt-24 pb-10 px-8 w-screen text-white'}>
-			<div className={'flex flex-col items-center'}>
+		<main className={'bg-blue-600 py-16 md:py-24 pb-10 text-white'}>
+			<div className={'flex flex-col items-center w-full'}>
 				<Image src={'/eagle.png'} alt={'Eagle'} width={300} height={300} />
-				<p className={'uppercase text-center mt-10 mb-6 text-6xl font-extrabold tracking-widest font-mono'}>EagleStrike</p>
+				<p className={`uppercase text-center mt-10 mb-6 text-8xl ${foughtKnight.className}`}>EagleStrike</p>
 				<div className={'flex flex-row justify-center gap-x-4 mt-4'}>
 					<a className={''} href={'https://www.facebook.com/114eaglestrike'}>
 						<svg
@@ -69,6 +70,6 @@ export default function IntroSection() {
 					</a>
 				</div>
 			</div>
-		</section>
+		</main>
 	);
 }

@@ -1,9 +1,8 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
 import './globals.css';
-import Nav from "@/app/components/Nav";
-import Footer from "@/app/components/Footer"
-const inter = Inter({ subsets: ['latin'] });
+import Nav from '@/app/components/Nav';
+import Footer from '@/app/components/Footer';
+import { inter } from './fonts';
 
 export const metadata: Metadata = {
 	title: 'EagleStrike',
