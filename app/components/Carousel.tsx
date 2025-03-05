@@ -25,6 +25,7 @@ export default function Carousel() {
 						alt={source.description}
 						className={'object-cover rounded-2xl'}
 						quality={80}
+						priority
 					/>
 				</div>
 			))}
