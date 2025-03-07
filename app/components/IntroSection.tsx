@@ -3,7 +3,7 @@ import { foughtKnight } from '../fonts';
 
 export default function IntroSection() {
 	return (
-		<main className={'bg-blue-600 py-16 md:py-24 pb-10 text-white'}>
+		<main className={'bg-blue-500/70 py-16 md:py-24 pb-10 text-white'}>
 			<div className={'flex flex-col items-center w-full'}>
 				<Image src={'/eagle.png'} alt={'Eagle'} width={300} height={300} />
 				<p className={`uppercase text-center mt-10 mb-6 text-8xl ${foughtKnight.className}`}>EagleStrike</p>
