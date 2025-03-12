@@ -2,12 +2,13 @@ import React, { ReactNode } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 interface ParallaxProps {
+    ref: HTMLDivElement;
     backgroundImage: string;
     height?: string;
     children?: ReactNode;
 }
 
-const Parallax: React.FC<ParallaxProps> = ({backgroundImage, height = "100vh", children}) => {
+const Parallax: React.FC<ParallaxProps> = ({ref, backgroundImage, height = "100vh", children}) => {
     const { scrollY } = useScroll();
     const y = useTransform(scrollY, [0, 500], ["0%", "50%"]);
 
@@ -20,7 +21,7 @@ const Parallax: React.FC<ParallaxProps> = ({backgroundImage, height = "100vh", c
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "center",
                 backgroundAttachment: "fixed",
-                translateY: y,
+                rotateZ: y,
             }}
         >
             {children && (

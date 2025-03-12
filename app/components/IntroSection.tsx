@@ -6,7 +6,7 @@ export default function IntroSection() {
 		<main className={'bg-blue-500/70 py-16 md:py-24 pb-10 text-white'}>
 			<div className={'flex flex-col items-center w-full'}>
 				<Image src={'/eagle.png'} alt={'Eagle'} width={300} height={300} />
-				<p className={`uppercase text-center mt-10 mb-6 text-8xl ${foughtKnight.className}`}>EagleStrike</p>
+				<p className={`uppercase text-center mt-10 mb-6 text-8xl sm:text-2xl ${foughtKnight.className}`}>EagleStrike</p>
 				<div className={'flex flex-row justify-center gap-x-4 mt-4'}>
 					<a className={''} href={'https://www.facebook.com/114eaglestrike'}>
 						<svg

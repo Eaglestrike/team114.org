@@ -3,11 +3,18 @@ import './globals.css';
 import Nav from '@/app/components/Nav';
 import Footer from '@/app/components/Footer';
 import { inter } from './fonts';
+import { Space_Grotesk} from "next/font/google"
 
 export const metadata: Metadata = {
 	title: 'EagleStrike',
 	description: 'Official page of the Team114 FRC team',
 };
+
+const space = Space_Grotesk({
+	weight: '400',
+	subsets: ['latin'],
+})
+
 
 export default function RootLayout({
 	children,
@@ -16,7 +23,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body className={inter.className}>
+			<body className={space.className}>
 				{/*<div className={'w-screen fixed bg-slate-900 z-40 border-2 border-black'}>*/}
 				{/*	<nav*/}
 				{/*		className={*/}
