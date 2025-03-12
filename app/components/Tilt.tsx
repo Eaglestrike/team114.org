@@ -11,8 +11,8 @@ export default function Tilt({
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const { left, top, width, height } = e.currentTarget.getBoundingClientRect();
-    const x = ((e.clientX - left) / width - 0.5) * 30; // Max tilt ±15 degrees
-    const y = ((e.clientY - top) / height - 0.5) * 30;
+    const x = ((e.clientX - left) / width - 0.5) * 20; // Max tilt ±15 degrees
+    const y = ((e.clientY - top) / height - 0.5) * 20;
 
     setTilt({ x, y });
   };

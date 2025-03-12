@@ -9,17 +9,17 @@ import React from "react";
 export default function AboutPage() {
 	return (
 		<div className={'bg-slate-700 pb-14 pb-10'}>
-			<div className="flex bg-slate-900 flex-col pb-20">
-				<div className={"bg-slate-600 px-12 pb-20 pt-32"}>
-				<text className={"ml-8 text-left text-white text-8xl text-bold"}>About Us</text>
-				<p className={"mx-8 text-left text-white text-xl mt-8"}>Team 114, also known as Eaglestrike, is the
-					official robotics team of Los Altos High School. Founded in 1997, Eaglestrike was one of the first
-					teams to be part of the FIRST Robotics Competition (FRC) series, joining in 1997.</p>
-				<p className={"mx-8 text-left text-white text-xl my-4"}>Our team is student-led, with very little mentor intervention. Students take important leadership
-					positions, design and build the robot on their own, and teach the next generation of students all
-					types of skills to continue the traditions of Eaglestrike.</p>
-				<p className={"mx-8 text-left text-white text-xl mb-8"}>As a career technical education (CTE) course, our goal is to prepare students for a career in the
-					STEM field, more specifically engineering, design, or computer science.</p>
+			<div className="flex bg-slate-900 flex-col py-20">
+				<div className={"bg-slate-800 border border-white rounded-xl mx-20 py-12 px-10"}>
+					<text className={"text-left text-white text-8xl text-bold"}>About Us</text>
+					<p className={"text-left text-white text-xl mt-8"}>Team 114, also known as Eaglestrike, is the
+						official robotics team of Los Altos High School. Founded in 1997, Eaglestrike was one of the first
+						teams to be part of the FIRST Robotics Competition (FRC) series, joining in 1997.</p>
+					<p className={"text-left text-white text-xl my-4"}>Our team is student-led, with very little mentor intervention. Students take important leadership
+						positions, design and build the robot on their own, and teach the next generation of students all
+						types of skills to continue the traditions of Eaglestrike.</p>
+					<p className={"text-left text-white text-xl mb-8"}>As a career technical education (CTE) course, our goal is to prepare students for a career in the
+						STEM field, more specifically engineering, design, or computer science.</p>
 				</div>
 					<div className="flex flex-row items-center justify-center py-20 relative">
 						{/* Tilt Card on Left */}
