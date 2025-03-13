@@ -10,8 +10,8 @@ export default function AboutPage() {
 	return (
 		<div className={'bg-slate-700 pb-14 pb-10'}>
 			<div className="flex bg-slate-900 flex-col py-20">
-				<div className={"bg-slate-800 border border-white rounded-xl mx-20 py-12 px-10"}>
-					<text className={"text-left text-white text-8xl text-bold"}>About Us</text>
+				<div className={"bg-slate-800 border border-white rounded-xl mx-20 py-12 px-2 sm:px-6 md:px-10"}>
+					<text className={"text-left text-white text-2xl sm:text-4xl md:text-8xl text-bold"}>About Us</text>
 					<p className={"text-left text-white text-xl mt-8"}>Team 114, also known as Eaglestrike, is the
 						official robotics team of Los Altos High School. Founded in 1997, Eaglestrike was one of the first
 						teams to be part of the FIRST Robotics Competition (FRC) series, joining in 1997.</p>
