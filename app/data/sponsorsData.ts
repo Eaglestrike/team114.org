@@ -102,11 +102,11 @@ const inKindSponsors: Sponsor[] = [
 		logo: 'HRS Original Color.png',
 		website: 'https://hawkridgesys.com/',
 	},
-	// {
-	// 	name: 'Bild',
-	// 	logo: 'bild_logo.png',
-	// 	website: 'https://getbild.com/',
-	// },
+	{
+		name: 'Bild',
+		logo: 'bild_logo.png',
+		website: 'https://getbild.com/',
+	},
 ];
 
 export { partners, goldSponsors, silverSponsors, bronzeSponsors, inKindSponsors };

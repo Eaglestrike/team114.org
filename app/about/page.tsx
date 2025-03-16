@@ -10,8 +10,8 @@ export default function AboutPage() {
 	return (
 		<div className={'bg-slate-700 pb-14 pb-10'}>
 			<div className="flex bg-slate-900 flex-col py-20">
-				<div className={"bg-slate-800 border border-white rounded-xl mx-20 py-12 px-10"}>
-					<text className={"text-left text-white text-8xl text-bold"}>About Us</text>
+				<div className={"bg-slate-800 border border-white rounded-xl mx-20 py-12 px-2 sm:px-6 md:px-10"}>
+					<text className={"text-left text-white text-2xl sm:text-4xl md:text-8xl text-bold"}>About Us</text>
 					<p className={"text-left text-white text-xl mt-8"}>Team 114, also known as Eaglestrike, is the
 						official robotics team of Los Altos High School. Founded in 1997, Eaglestrike was one of the first
 						teams to be part of the FIRST Robotics Competition (FRC) series, joining in 1997.</p>
@@ -58,7 +58,7 @@ export default function AboutPage() {
 									<p className="font-bold text-left text-4xl md:text-3xl sm:text-xl">Students
 										Learn</p>
 									<p className="text-left md:text-base sm:text-sm">
-										Team114 equips LAHS students with the skills necessary to thrive in their
+										Team 114 equips students with the skills necessary to thrive in their
 										respective
 										fields, offering specialized online courses.
 									</p>
@@ -85,8 +85,8 @@ export default function AboutPage() {
 							<Tilt>
 								<div
 									className="text-white font-light aspect-square flex flex-col items-center justify-center border border-white rounded-md p-10 bg-black/50 backdrop-blur-md gap-y-3">
-									<h3 className="font-bold text-6xl md:text-5xl sm:text-xl">Students</h3>
-									<h3 className="font-bold text-7xl md:text-6xl sm:text-2xl">GROW</h3>
+									<h3 className="font-bold text-6xl md:text-5xl sm:text-xl text-left">Students</h3>
+									<h3 className="font-bold text-8xl md:text-6xl sm:text-2xl text-left">Thrive</h3>
 
 								</div>
 							</Tilt>
