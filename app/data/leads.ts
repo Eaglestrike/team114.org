@@ -12,6 +12,7 @@ const captains = [
 const leads = [
 	{ image: '/eaglework.jpeg', role: 'Scouting Lead', name: 'Edward Liu' },
 	{ image: '/eaglework.jpeg', role: 'Cad Lead', name: 'Yanai Levin' },
+	{ image: '/eaglework.jpeg', role: 'Electrical Lead', name: 'Raj Virginkar' },
 	{ image: '/eaglework.jpeg', role: 'Code Lead', name: 'Sunayna Singh' },
 	{ image: '/eaglework.jpeg', role: 'CNC Lead', name: 'Bryce Lin' },
 	{ image: '/eaglework.jpeg', role: 'Prototyping Lead', name: 'Zoe Cheng' },
