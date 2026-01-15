@@ -8,7 +8,7 @@ const captains = [
 	{ image: '/eaglework.jpeg', name: 'Zoe Cheng' },
 	{ image: '/eaglework.jpeg', name: 'Riya Mehrotra' },
 ];
-
+//
 const leads = [
 	{ image: '/eaglework.jpeg', role: 'Scouting Lead', name: 'Edward Liu' },
 	{ image: '/eaglework.jpeg', role: 'Cad Lead', name: 'Zoe Cheng' },
