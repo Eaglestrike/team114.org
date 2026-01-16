@@ -1,49 +1,79 @@
-'use client';
-import React from 'react';
-import Image from 'next/image';
-import { leads, captains } from '@/app/data/leads';
+"use client"
+import Image from "next/image"
+import { leads, captains } from "@/app/data/leads"
 
 export default function Meet() {
-	return (
-		<div className={'bg-slate-900 p-y-10'}>
-			<p className={'text-white text-6xl text-left font-semibold p-7'}>Meet Team114</p>
-			<p className={'pt-10 pb-8 text-white text-center text-5xl'}>Captains</p>
-			<div className={'w-screen grid grid-cols-4 gap-3 p-4 justify-items-center'}>
-				<div></div>
-				{captains.map((captain, index) => (
-					<div className={'bg-slate-600 rounded-3xl justify-items-center p-4'} key={index}>
-						<div className={'lg:h-52 m:h-32 sm:h-20 aspect-square relative'}>
-							<Image
-								fill={true}
-								src={captain.image}
-								alt={'captain'}
-								className={'object-contain aspect-square rounded-2xl'}
-								quality={100}
-							/>
-						</div>
-						<div className={'bg-gray-20 text-center text-white text-2xl m-1'}>{captain.name}</div>
-					</div>
-				))}
-				<div></div>
-			</div>
-			<p className={'pt-10 pb-8 text-white text-center text-5xl'}>Leads</p>
-			<div className={'w-screen grid grid-cols-4 gap-x-6 gap-y-8 justify-items-center pb-10'}>
-				{leads.map((lead, index) => (
-					<div className={'bg-slate-500 rounded-3xl justify-items-center p-4'} key={index}>
-						<div className={'lg:h-52 m:h-32 sm:h-20 aspect-square relative'}>
-							<Image
-								fill={true}
-								src={lead.image}
-								alt={lead.role}
-								className={'object-contain aspect-square rounded-3xl'}
-								quality={100}
-							/>
-						</div>
-						<div className={'bg-gray-20 text-center text-white lg:text-xl sm:text-m m-1'}>{lead.role}:</div>
-						<div className={'bg-gray-20 text-center text-white lg:text-2xl sm:text-lg'}>{lead.name}</div>
-					</div>
-				))}
-			</div>
-		</div>
-	);
+    return (
+        <div className="bg-slate-900 min-h-screen py-16 px-4 md:px-8">
+            <div className="max-w-7xl mx-auto">
+                <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-bold mb-16 border-b border-slate-700 pb-6">
+                    Meet Team 114
+                </h1>
+                <section className="mb-20">
+                    <h2 className="text-white text-3xl md:text-4xl font-semibold text-center mb-10 relative">
+                        <span className="relative inline-block">
+                            Captains
+                            <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-sky-500 rounded-full"></span>
+                        </span>
+                    </h2>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                        {captains.map((captain, index) => (
+                            <div
+                                key={index}
+                                className="bg-slate-800 flex flex-col rounded-xl overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-sky-900/20 hover:shadow-xl"
+                            >
+                                <div className="aspect-square relative h-64 md:h-72 overflow-hidden bg-slate-700">
+                                    <Image
+                                        fill={true}
+                                        src={captain.image || "/placeholder.svg"}
+                                        alt={captain.name}
+                                        className="object-cover transition-transform duration-300 hover:scale-105"
+                                        quality={90}
+                                    />
+                                </div>
+                                <div className="p-5">
+                                    <h3 className="text-white text-xl md:text-2xl font-semibold text-center">{captain.name}</h3>
+                                    <p className="text-slate-400 text-center mt-1">Captain</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </section>
+
+                <section className="mb-16">
+                    <h2 className="text-white text-3xl md:text-4xl font-semibold text-center mb-10 relative">
+                        <span className="relative inline-block">
+                            Leads
+                            <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-sky-500 rounded-full"></span>
+                        </span>
+                    </h2>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                        {leads.map((lead, index) => (
+                            <div
+                                key={index}
+                                className="bg-slate-800 flex flex-col rounded-xl overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-sky-900/20 hover:shadow-xl"
+                            >
+                                <div className="aspect-square relative h-48 md:h-56 overflow-hidden bg-slate-700">
+                                    <Image
+                                        fill={true}
+                                        src={lead.image || "/placeholder.svg"}
+                                        alt={lead.name}
+                                        className="object-cover transition-transform duration-300 hover:scale-105"
+                                        quality={85}
+                                    />
+                                </div>
+                                <div className="p-4">
+                                    <p className="text-sky-400 text-sm font-medium mb-1">{lead.role}</p>
+                                    <h3 className="text-white text-lg md:text-xl font-semibold">{lead.name}</h3>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </section>
+            </div>
+        </div>
+    )
 }
+

@@ -30,7 +30,7 @@ export default function Nav() {
 		>
 			<nav
 				className={
-					'flex flex-row justify-end gap-x-5  p-4 bg-slate-800 bg-opacity-95  border-slate-400' +
+					'flex flex-row grow justify-end gap-x-5  p-4 bg-slate-800 bg-opacity-95  border-slate-400' +
 					'uppercase text-white font-semibold'
 				}
 			>
