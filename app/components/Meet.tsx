@@ -1,6 +1,6 @@
 "use client"
 import Image from "next/image"
-import { leads, captains } from "@/app/data/leads"
+import { leads, captains, mentors } from "@/app/data/leads"
 
 export default function Meet() {
     return (
@@ -67,6 +67,37 @@ export default function Meet() {
                                 <div className="p-4">
                                     <p className="text-sky-400 text-sm font-medium mb-1">{lead.role}</p>
                                     <h3 className="text-white text-lg md:text-xl font-semibold">{lead.name}</h3>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </section>
+
+                <section className="mb-16">
+                    <h2 className="text-white text-3xl md:text-4xl font-semibold text-center mb-10 relative">
+                        <span className="relative inline-block">
+                            Mentors
+                            <span className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-sky-500 rounded-full"></span>
+                        </span>
+                    </h2>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                        {mentors.map((mentor, index) => (
+                            <div
+                                key={index}
+                                className="bg-slate-800 flex flex-col rounded-xl overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-sky-900/20 hover:shadow-xl"
+                            >
+                                <div className="aspect-square relative h-48 md:h-56 overflow-hidden bg-slate-700">
+                                    <Image
+                                        fill={true}
+                                        src={mentor.image || "/placeholder.svg"}
+                                        alt={mentor.name}
+                                        className="object-cover transition-transform duration-300 hover:scale-105"
+                                        quality={85}
+                                    />
+                                </div>
+                                <div className="p-4">
+                                    <h3 className="text-white text-lg md:text-xl font-semibold">{mentor.name}</h3>
                                 </div>
                             </div>
                         ))}

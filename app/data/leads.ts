@@ -5,21 +5,27 @@ interface person {
 }
 
 const captains = [
-	{ image: '/eaglework.jpeg', name: 'Yanai Levin' },
-	{ image: '/eaglework.jpeg', name: 'Raj Virginkar' },
+	{ image: '/eaglework.jpeg', name: 'Riya Mehrotra' },
+	{ image: '/eaglework.jpeg', name: 'Zoe Cheng' },
 ];
 
 const leads = [
 	{ image: '/eaglework.jpeg', role: 'Scouting Lead', name: 'Edward Liu' },
-	{ image: '/eaglework.jpeg', role: 'Cad Lead', name: 'Yanai Levin' },
-	{ image: '/eaglework.jpeg', role: 'Electrical Lead', name: 'Raj Virginkar' },
-	{ image: '/eaglework.jpeg', role: 'Code Lead', name: 'Sunayna Singh' },
-	{ image: '/eaglework.jpeg', role: 'CNC Lead', name: 'Bryce Lin' },
-	{ image: '/eaglework.jpeg', role: 'Prototyping Lead', name: 'Zoe Cheng' },
-	{ image: '/eaglework.jpeg', role: 'Machining Lead', name: 'Ben Samek' },
-	{ image: '/eaglework.jpeg', role: 'New Member Lead', name: 'Aaron Zhu' },
-	{ image: '/eaglework.jpeg', role: 'Sponsorship Lead', name: 'Lea Radovanovic' },
-	{ image: '/eaglework.jpeg', role: 'Assembly Lead', name: 'James Doyas' },
+	{ image: '/eaglework.jpeg', role: 'Cad Lead', name: 'Zoe Cheng' },
+	{ image: '/eaglework.jpeg', role: 'Code Lead', name: 'Alan Chen' },
+	{ image: '/eaglework.jpeg', role: 'CNC Lead', name: 'Phineas Lunt' },
+	{ image: '/eaglework.jpeg', role: 'Prototyping Lead', name: 'Rodin Hooshiyar' },
+	{ image: '/eaglework.jpeg', role: 'Machining Lead', name: 'Suren Oorzhak' },
+	{ image: '/eaglework.jpeg', role: 'New Member Lead', name: 'Arush Garg' },
+	{ image: '/eaglework.jpeg', role: 'Sponsorship Lead', name: 'Alyssa Fang' },
+	{ image: '/eaglework.jpeg', role: 'Assembly Lead', name: 'Aaron Zhu' },
 ];
 
-export { captains, leads };
+const mentors = [
+	{ image: '/eaglework.jpeg', name: 'James Fry' },
+	{ image: '/team_pics/ryan.jpeg', name: 'Ryan Cardono' },
+	{ image: '/team_pics/douglas.jpeg', name: 'Douglas McCluer' },
+
+]
+
+export { captains, leads, mentors};
