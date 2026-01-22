@@ -5,20 +5,20 @@ interface person {
 }
 
 const captains = [
-	{ image: '/eaglework.jpeg', name: 'Riya Mehrotra' },
-	{ image: '/eaglework.jpeg', name: 'Zoe Cheng' },
+	{ image: '/team_pics/leads/Riya.jpg', name: 'Riya Mehrotra' },
+	{ image: '/team_pics/leads/Zoe.jpg', name: 'Zoe Cheng' },
 ];
 
 const leads = [
-	{ image: '/eaglework.jpeg', role: 'Scouting Lead', name: 'Edward Liu' },
-	{ image: '/eaglework.jpeg', role: 'Cad Lead', name: 'Zoe Cheng' },
-	{ image: '/eaglework.jpeg', role: 'Code Lead', name: 'Alan Chen' },
-	{ image: '/eaglework.jpeg', role: 'CNC Lead', name: 'Phineas Lunt' },
+	{ image: '/team_pics/leads/Edward.jpg', role: 'Scouting Lead', name: 'Edward Liu' },
+	{ image: '/team_pics/leads/Zoe.jpg', role: 'Cad Lead', name: 'Zoe Cheng' },
+	{ image: '/team_pics/leads/Alan.jpg', role: 'Code Lead', name: 'Alan Chen' },
+	{ image: '/team_pics/leads/Phin.jpg', role: 'CNC Lead', name: 'Phineas Lunt' },
 	{ image: '/eaglework.jpeg', role: 'Prototyping Lead', name: 'Rodin Hooshiyar' },
-	{ image: '/eaglework.jpeg', role: 'Machining Lead', name: 'Suren Oorzhak' },
-	{ image: '/eaglework.jpeg', role: 'New Member Lead', name: 'Arush Garg' },
-	{ image: '/eaglework.jpeg', role: 'Sponsorship Lead', name: 'Alyssa Fang' },
-	{ image: '/eaglework.jpeg', role: 'Assembly Lead', name: 'Aaron Zhu' },
+	{ image: '/team_pics/leads/Suren.jpg', role: 'Machining Lead', name: 'Suren Oorzhak' },
+	{ image: '/team_pics/leads/Arush copy.jpg', role: 'New Member Lead', name: 'Arush Garg' },
+	{ image: '/team_pics/leads/Alyssa.jpg', role: 'Sponsorship Lead', name: 'Alyssa Fang' },
+	{ image: '/team_pics/leads/Aaron.jpg', role: 'Assembly Lead', name: 'Aaron Zhu' },
 ];
 
 const mentors = [
