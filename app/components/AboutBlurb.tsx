@@ -31,7 +31,8 @@ export default function AboutBlurb() {
 				>
 					<p className={'pt-7 mb-8 text-4xl font-bold text-left'}>About Us</p>
 					<p>
-						Team 114, also known as Eaglestrike, is the official robotics team of Los Altos High School. Founded in 1997, Eaglestrike was one of the first teams to be part of the FIRST Robotics Competition (FRC) series.
+						Team 114, also known as Eaglestrike, is the official robotics team of Los Altos High School. 
+						Since 1997, Team 114 has fostered excellence in engineering, teamwork, and leadership, providing students with hands-on experience in STEM fields while promoting innovation, professionalism, and community engagement.
 					</p>
 					<a
 						className={

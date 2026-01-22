@@ -14,8 +14,8 @@ export default function AboutPage() {
 					<text className={"text-left text-white text-2xl sm:text-4xl md:text-8xl text-bold"}>About Us</text>
 					<p className={"text-left text-white text-xl mt-8"}>Team 114, also known as Eaglestrike, is the
 						official robotics team of Los Altos High School. Founded in 1997, Eaglestrike was one of the first
-						teams to be part of the FIRST Robotics Competition (FRC) series, joining in 1997.</p>
-					<p className={"text-left text-white text-xl my-4"}>Our team is student-led, with very little mentor intervention. Students take important leadership
+						teams to be part of the FIRST Robotics Competition (FRC) series, joining in 1997. </p>
+					<p className={"text-left text-white text-xl my-4"}>Our team is entirely student-led, with very little mentor intervention. Students take important leadership
 						positions, design and build the robot on their own, and teach the next generation of students all
 						types of skills to continue the traditions of Eaglestrike.</p>
 					<p className={"text-left text-white text-xl mb-8"}>As a career technical education (CTE) course, our goal is to prepare students for a career in the
@@ -92,7 +92,7 @@ export default function AboutPage() {
 							</Tilt>
 						</div>
 
-						{/* Image on Right */}
+						{/* Image on Rights */}
 						<div className="w-3/4 relative">
 							<Image
 								src="/team_pics/Z62_9413 (1).jpg"
