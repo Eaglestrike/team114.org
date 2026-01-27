@@ -19,6 +19,7 @@ const leads = [
 	{ image: '/team_pics/leads/Arush copy.jpg', role: 'New Member Lead', name: 'Arush Garg' },
 	{ image: '/team_pics/leads/Alyssa.jpg', role: 'Sponsorship Lead', name: 'Alyssa Fang' },
 	{ image: '/team_pics/leads/Aaron.jpg', role: 'Assembly Lead', name: 'Aaron Zhu' },
+	{ image: '/team_pics/leads/Rayhan.jpg', role: 'Electrical Lead', name: 'Rayhan Merchant' },
 ];
 
 const mentors = [
