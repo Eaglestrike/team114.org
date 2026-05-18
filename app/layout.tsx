@@ -6,7 +6,7 @@ import { inter } from './fonts';
 import { Space_Grotesk} from "next/font/google"
 
 export const metadata: Metadata = {
-	title: 'EagleStrike',
+	title: 'Eaglestrike',
 	description: 'Official page of the Team114 FRC team',
 };
 
