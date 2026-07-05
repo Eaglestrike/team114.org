@@ -39,7 +39,6 @@ export default function MeetTheRobot() {
                         title="Student Built"
                         description="Always designed and constructed by our team"
                     />
-                </div>
             </div>
         </section>
     )
