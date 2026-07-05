@@ -13,17 +13,15 @@ export default function MeetTheRobot() {
                 </div>
 
                 <div className="relative aspect-video max-w-3xl mx-auto mb-16">
-                    <Link href="/snoopy">
                         <div className="relative h-full w-full overflow-hidden rounded-3xl border-2 border-slate-700 transition-all duration-300 hover:border-blue-500 hover:shadow-xl hover:shadow-blue-900/20">
                             <Image
-                                src="/inertia.svg"
+                                src="/inertia.jpeg"
                                 alt="Inertia - Our 2026 Robot"
                                 fill
                                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                 className="object-contain"
                             />
                         </div>
-                    </Link>
                 </div>
                     <FeatureCard
                         icon={<svg
