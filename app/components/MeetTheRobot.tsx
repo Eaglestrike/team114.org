@@ -16,7 +16,7 @@ export default function MeetTheRobot() {
                     <Link href="/snoopy">
                         <div className="relative h-full w-full overflow-hidden rounded-3xl border-2 border-slate-700 transition-all duration-300 hover:border-blue-500 hover:shadow-xl hover:shadow-blue-900/20">
                             <Image
-                                src="/placeholder.svg"
+                                src="/inertia.svg"
                                 alt="Inertia - Our 2026 Robot"
                                 fill
                                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
