@@ -41,7 +41,7 @@ export default function Nav() {
 					About
 				</a>
 				<a href="/snoopy" className={'hover:text-blue-300 hover:font-extrabold'}>
-					Snoopy
+					History
 				</a>
 				<a href="/sponsors" className={'hover:text-blue-300 hover:font-extrabold'}>
 					Sponsors
