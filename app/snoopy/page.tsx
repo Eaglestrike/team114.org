@@ -1,17 +1,30 @@
 import Pardon from '@/app/components/Pardon';
-import FeatureCard from '@/app/components/MeetTheRobot';
 import Image from "next/image"
 
 import Link from "next/link";
 
+function FeatureCard({ icon, title, description }: {
+    icon: React.ReactNode; title: string; description: React.ReactNode
+}) {
+    return (
+        <div className="max-w-xl mx-auto bg-slate-800 p-6 rounded-2xl shadow-md border border-slate-700 transition-all duration-300 hover:shadow-lg hover:shadow-blue-900/20 hover:border-blue-500" >
+            <div className="text-blue-400 mb-4 flex justify-center">{icon}</div>
+            <h3 className="text-lg font-bold text-white mb-2 text-center">{title}</h3>
+            <div className="text-gray-300 text-center">{description}</div>
+        </div>
+    )
+}
+
+
 export default function SnoopyPage() {
     return (
         <>
-            <h2>Snoopy - Our 2024 Robot</h2>
+            <div className="h-24"></div>
+            <h2 className="text-3xl text-center">Snoopy - Our 2024 Robot</h2>
             <div className="relative aspect-video max-w-3xl mx-auto mb-16">
                 <div className="relative h-full w-full overflow-hidden rounded-3xl border-2 border-slate-700 transition-all duration-300 hover:border-blue-500 hover:shadow-xl hover:shadow-blue-900/20">
                     <Image
-                        src="/snoopy.svg"
+                        src="/robot shadow.png"
                         alt="Snoopy - Our 2024 Robot"
                         fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
