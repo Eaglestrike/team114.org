@@ -80,7 +80,7 @@ export default function Meet() {
 
                     <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
                         {mentors.map((mentor, index) => (
-                            <div className={"bg-slate-800 border border-white rounded-xl mx-20 py-12 px-2 sm:px-6 md:px-10"}>
+                            <div className={"bg-slate-800 border border-white rounded-xl mx-22 py-12 px-2 sm:px-6 md:px-10 overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-sky-900/20 hover:shadow-xl"}>
                                 <div className="flex flex-row items-start">
                                     <div
                                         key={index}
