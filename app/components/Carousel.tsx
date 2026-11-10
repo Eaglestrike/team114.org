@@ -4,8 +4,9 @@ import Image from "next/image";
 
 export default function Carousel () {
     const sources = [
-        {description: "Robot", image: "/2024SFR-091.jpg"},
+        
         {description: "sus robot", image: "/Z62_8567.jpg"},
+        {description: "Robot", image: "/2024SFR-091.jpg"},
         {description: "Climb", image: "/Z62_8742.jpg"},
     ];
 

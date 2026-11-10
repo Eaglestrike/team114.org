@@ -1,5 +1,6 @@
 "use client"
 import Image from "next/image"
+import HoverImage from "@/app/components/HoverImage"
 import { leads, captains, mentors } from "@/app/data/leads"
 
 export default function Meet() {
@@ -17,19 +18,17 @@ export default function Meet() {
                         </span>
                     </h2>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
                         {captains.map((captain, index) => (
                             <div
                                 key={index}
                                 className="bg-slate-800 flex flex-col rounded-xl overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-sky-900/20 hover:shadow-xl"
                             >
                                 <div className="aspect-square relative h-64 md:h-72 overflow-hidden bg-slate-700">
-                                    <Image
-                                        fill={true}
-                                        src={captain.image || "/placeholder.svg"}
-                                        alt={captain.name}
-                                        className="object-cover transition-transform duration-300 hover:scale-105"
-                                        quality={90}
+                                    <HoverImage
+                                        image_default = {captain.image_default}
+                                        image_hover = {captain.image_hover}
+                                        name={captain.name}
                                     />
                                 </div>
                                 <div className="p-5">
@@ -56,12 +55,10 @@ export default function Meet() {
                                 className="bg-slate-800 flex flex-col rounded-xl overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-sky-900/20 hover:shadow-xl"
                             >
                                 <div className="aspect-square relative h-48 md:h-56 overflow-hidden bg-slate-700">
-                                    <Image
-                                        fill={true}
-                                        src={lead.image || "/placeholder.svg"}
-                                        alt={lead.name}
-                                        className="object-cover transition-transform duration-300 hover:scale-105"
-                                        quality={85}
+                                    <HoverImage
+                                        image_default = {lead.image_default}
+                                        image_hover = {lead.image_hover}
+                                        name={lead.name}
                                     />
                                 </div>
                                 <div className="p-4">
@@ -81,23 +78,25 @@ export default function Meet() {
                         </span>
                     </h2>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
                         {mentors.map((mentor, index) => (
-                            <div
-                                key={index}
-                                className="bg-slate-800 flex flex-col rounded-xl overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-sky-900/20 hover:shadow-xl"
-                            >
-                                <div className="aspect-square relative h-48 md:h-56 overflow-hidden bg-slate-700">
-                                    <Image
-                                        fill={true}
-                                        src={mentor.image || "/placeholder.svg"}
-                                        alt={mentor.name}
-                                        className="object-cover transition-transform duration-300 hover:scale-105"
-                                        quality={85}
-                                    />
-                                </div>
-                                <div className="p-4">
-                                    <h3 className="text-white text-lg md:text-xl font-semibold">{mentor.name}</h3>
+                            <div className={"bg-slate-800 border border-white rounded-xl mx-20 py-12 px-2 sm:px-6 md:px-10"}>
+                                <div className="flex flex-row items-start">
+                                    <div
+                                        key={index}
+                                        className="w-fit bg-slate-800 flex flex-col items-start overflow-hidden"
+                                    >   <div className="p-4">
+                                            <h3 className="text-white text-lg md:text-3xl font-semibold">{mentor.name}</h3>
+                                        </div>
+                                        <div className="aspect-square relative h-48 md:h-72 overflow-hidden bg-slate-700">
+                                            <HoverImage
+                                                image_default = {mentor.image_default}
+                                                image_hover = {mentor.image_hover}
+                                                name={mentor.name}
+                                            />
+                                        </div>
+                                    </div>
+					                <p className={'text-white pt-20 pl-12 text-2xl'} dangerouslySetInnerHTML={{__html: mentor.description.replaceAll("<br>", "<br><br>")}}></p>
                                 </div>
                             </div>
                         ))}
