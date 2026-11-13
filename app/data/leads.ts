@@ -14,19 +14,19 @@ const leads = [
 	{ image_default: '/team_pics/leads/emma_normal.jpg', image_hover: '/team_pics/leads/emma_114.jpg', role: 'Scouting and Strategy Lead', name: 'Emma Lu' },
 	{ image_default: '/team_pics/leads/theo_normal.jpg', image_hover: '/team_pics/leads/theo_114.jpg', role: 'Cad Lead', name: 'Theo Wolter' },
 	{ image_default: '/team_pics/leads/maximus_normal.jpg', image_hover: '/team_pics/leads/maximus_114.jpg', role: 'Code Lead', name: 'Maximus Zhang' },
-	{ image_default: '/placeholder.png', role: 'CNC Lead', image_hover: '/placeholder.png', name: 'Farhan Ali' },
-	{ image_default: '/team_pics/leads/rodin_normal.jpg', image_hover: '/team_pics/leads/rodin_114.jpg', role: 'Prototyping Lead', name: 'Rodin Hooshiyar' },
+	{ image_default: '/team_pics/leads/ethan_normal.jpg', image_hover: '/team_pics/leads/ethan_114.jpg', role: 'Organization Lead', name: 'Ethan Chiang' },
 	{ image_default: '/team_pics/leads/ayaan_normal.jpg', image_hover: '/team_pics/leads/ayaan_114.jpg', role: 'Machining Lead', name: 'Ayaan Dwivedi' },
 	{ image_default: '/team_pics/leads/ananda_normal.jpg', image_hover: '/team_pics/leads/ananda_114.jpg', role: 'Business and Media Lead', name: 'Ananda Jauhar' },
 	{ image_default: '/team_pics/leads/ricky_normal.jpg', image_hover: '/team_pics/leads/ricky_114.jpg', role: 'Assembly Lead', name: 'Ricky Zhao' },
 	{ image_default: '/team_pics/leads/ishika_normal.jpg', image_hover: '/team_pics/leads/ishika_114.jpg', role: 'Electrical Lead', name: 'Ishika Anand' },
+	{ image_default: '', role: 'CNC Lead', image_hover: '', name: 'Farhan Ali' },
 ];
 
 const mentors = [
-	{ image_default: '/team_pics/mentors/mrhine_normal.jpg', image_hover: '/team_pics/mentors/mrhine_silly.jpg', name: 'Stephen Hine', description: 'Teacher at Los Altos High School since 2019<br>Teaches Robotics I and II<br>With the team since 2015' },
+	{ image_default: '/team_pics/mentors/mrhine_normal.jpg', image_hover: '/team_pics/mentors/mrhine_silly.jpg', name: 'Stephen Hine', description: 'Teacher at Los Altos High School since 2015<br>Teaches Robotics I and II<br>Mentor since 2017' },
 	{ image_default: '/team_pics/mentors/ryan_normal.jpg', image_hover: '/team_pics/mentors/ryan_silly.jpg', name: 'Ryan Cardono', description: 'Works at Tesla<br>Team 114 member in 2018<br>Mentor since 2021' },
-	{ image_default: '/team_pics/mentors/douglas_normal.jpg', image_hover: '/team_pics/mentors/douglas_silly.jpg', name: 'Douglas McCluer', description: 'System administrator at Veterans Affair Medical Center<br>Freelance sales representative<br>With the team since 2023' },
-	{ image_default: '/placeholder.png', image_hover: '/placeholder.png', name: 'James Fry', description: 'Works at Beam On<br>Team 114 member from 2001-2002<br>Mentor since 2006' },
+	{ image_default: '/team_pics/mentors/douglas_normal.jpg', image_hover: '/team_pics/mentors/douglas_silly.jpg', name: 'Douglas McCluer', description: 'System administrator at Veterans Affair Medical Center<br>Freelance sales representative<br>Mentor since 2023' },
+	{ image_default: '', image_hover: '', name: 'James Fry', description: 'Works at Beam On<br>Team 114 member from 2001-2002<br>Mentor since 2006' },
 	{ image_default: '/team_pics/mentors/manildi_normal.jpg', image_hover: '/team_pics/mentors/manildi_silly.jpg', name: 'Joseph Manildi', description: 'Teacher at Los Altos High School<br>Teaches AP Environmental Science and Engineering<br>With the team since 2025' },
 	{ image_default: '/team_pics/mentors/mrshine_normal.jpg', image_hover: '/team_pics/mentors/mrshine_silly.jpg', name: 'Kelsey Ayers', description: "Works at Standford Hospital as a physician's associate<br>Chaperone since 2025" }
 ]

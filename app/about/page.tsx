@@ -1,7 +1,6 @@
 import TextMove from '@/app/components/TextMove';
 import Pardon from '@/app/components/Pardon';
 import Meet from '@/app/components/Meet';
-import Carousel from '@/app/components/Carousel';
 import Tilt from '@/app/components/Tilt';
 import Image from "next/image";
 import React from "react";
@@ -106,10 +105,6 @@ export default function AboutPage() {
 					</div>
 			</div>
 	<Meet/>
-	<div className={"p-9 pt-10"}>
-		<text className={"text-center text-7xl pb-36"}>Media</text>
-		<Carousel/>
-	</div>
 		</div>
 	);
 }

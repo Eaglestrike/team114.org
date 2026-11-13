@@ -22,7 +22,7 @@ export default function Meet() {
                         {captains.map((captain, index) => (
                             <div
                                 key={index}
-                                className="bg-slate-800 flex flex-col rounded-xl overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-sky-900/20 hover:shadow-xl"
+                                className="group bg-slate-800 flex flex-col rounded-xl overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-sky-900/20 hover:shadow-xl"
                             >
                                 <div className="aspect-square relative h-64 md:h-72 overflow-hidden bg-slate-700">
                                     <HoverImage
@@ -52,7 +52,7 @@ export default function Meet() {
                         {leads.map((lead, index) => (
                             <div
                                 key={index}
-                                className="bg-slate-800 flex flex-col rounded-xl overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-sky-900/20 hover:shadow-xl"
+                                className="group bg-slate-800 flex flex-col rounded-xl overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-sky-900/20 hover:shadow-xl"
                             >
                                 <div className="aspect-square relative h-48 md:h-56 overflow-hidden bg-slate-700">
                                     <HoverImage
@@ -80,23 +80,20 @@ export default function Meet() {
 
                     <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
                         {mentors.map((mentor, index) => (
-                            <div className={"bg-slate-800 border border-white rounded-xl mx-22 py-12 px-2 sm:px-6 md:px-10 overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-sky-900/20 hover:shadow-xl"}>
-                                <div className="flex flex-row items-start">
-                                    <div
-                                        key={index}
-                                        className="w-fit bg-slate-800 flex flex-col items-start overflow-hidden"
-                                    >   <div className="p-4">
-                                            <h3 className="text-white text-lg md:text-3xl font-semibold">{mentor.name}</h3>
-                                        </div>
-                                        <div className="aspect-square relative h-48 md:h-72 overflow-hidden bg-slate-700">
-                                            <HoverImage
-                                                image_default = {mentor.image_default}
-                                                image_hover = {mentor.image_hover}
-                                                name={mentor.name}
-                                            />
-                                        </div>
-                                    </div>
-					                <p className={'text-white pt-20 pl-12 text-2xl'} dangerouslySetInnerHTML={{__html: mentor.description.replaceAll("<br>", "<br><br>")}}></p>
+                            <div
+                                key={index}
+                                className="group bg-slate-800 rounded-xl overflow-hidden shadow-lg flex flex-row transform transition-all duration-300 hover:scale-105 hover:shadow-sky-900/20 hover:shadow-xl"
+                            >
+                                <div className="relative w-2/5 md:w-1/3 min-h-56 md:min-h-72 shrink-0 overflow-hidden">
+                                    <HoverImage
+                                        image_default={mentor.image_default}
+                                        image_hover={mentor.image_hover}
+                                        name={mentor.name}
+                                    />
+                                </div>
+                                <div className="flex flex-col justify-center p-6 md:p-10">
+                                    <h3 className="text-white text-2xl md:text-3xl font-semibold">{mentor.name}</h3>
+                                    <p className="text-slate-300 text-base md:text-lg mt-3 leading-relaxed" dangerouslySetInnerHTML={{__html: mentor.description}}></p>
                                 </div>
                             </div>
                         ))}
