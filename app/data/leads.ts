@@ -19,6 +19,7 @@ const leads = [
 	{ image_default: '/team_pics/leads/ananda_normal.jpg', image_hover: '/team_pics/leads/ananda_114.jpg', role: 'Business and Media Lead', name: 'Ananda Jauhar' },
 	{ image_default: '/team_pics/leads/ricky_normal.jpg', image_hover: '/team_pics/leads/ricky_114.jpg', role: 'Assembly Lead', name: 'Ricky Zhao' },
 	{ image_default: '/team_pics/leads/ishika_normal.jpg', image_hover: '/team_pics/leads/ishika_114.jpg', role: 'Electrical Lead', name: 'Ishika Anand' },
+	{ image_default: '', image_hover: '', role: 'Prototyping Lead', name: 'Ethan Huang' },
 	{ image_default: '', role: 'CNC Lead', image_hover: '', name: 'Farhan Ali' },
 ];
 

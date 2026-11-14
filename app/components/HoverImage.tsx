@@ -12,7 +12,7 @@ export default function HoverImage({
     name: string
 }) {
     if (!image_default) {
-        return <div className="absolute inset-0 bg-slate-900" aria-label={name} />;
+        return <div className="absolute inset-0 bg-[#0c1222]" aria-label={name} />;
     }
 
     return (
