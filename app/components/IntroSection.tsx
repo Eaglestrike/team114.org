@@ -1,18 +1,20 @@
 import Image from 'next/image';
 import { foughtKnight } from '../fonts';
+import Stats from '@/app/components/Stats';
 
 export default function IntroSection() {
 	return (
 		<main className={'bg-blue-500/70 py-16 md:py-24 pb-10 text-white'}>
 			<div className={'flex flex-col items-center w-full'}>
 				<Image src={'/eagle.png'} alt={'Eagle'} width={300} height={300} />
-				<p className={`uppercase text-center mt-10 mb-6 md:text-9xl sm:text-8xl text-4xl ${foughtKnight.className}`}>EagleStrike</p>
-				<div className={'flex flex-row justify-center gap-x-4 mt-4'}>
+				<div className={'inline-flex flex-col'}>
+					<p className={`uppercase text-center mt-10 text-4xl sm:text-6xl lg:text-8xl 2xl:text-9xl ${foughtKnight.className}`}>EagleStrike</p>
+					<div className={'flex flex-row justify-center gap-x-3 mt-1'}>
 					<a className={''} href={'https://www.facebook.com/114eaglestrike'}>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
-							width="36"
-							height="36"
+							width="22"
+							height="22"
 							fill="currentColor"
 							className="bi bi-facebook hover:fill-sky-300"
 							viewBox="0 0 16 16"
@@ -23,8 +25,8 @@ export default function IntroSection() {
 					<a className={''} href={'https://twitter.com/114eaglestrike'}>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
-							width="36"
-							height="36"
+							width="22"
+							height="22"
 							fill="currentColor"
 							className="bi bi-facebook hover:fill-sky-300"
 							viewBox="0 0 16 16"
@@ -35,8 +37,8 @@ export default function IntroSection() {
 					<a className={''} href={'https://www.instagram.com/114eaglestrike/'}>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
-							width="36"
-							height="36"
+							width="22"
+							height="22"
 							fill="currentColor"
 							className="bi bi-facebook hover:fill-sky-300"
 							viewBox="0 0 16 16"
@@ -47,8 +49,8 @@ export default function IntroSection() {
 					<a className={''} href={'https://github.com/Eaglestrike'}>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
-							width="36"
-							height="36"
+							width="22"
+							height="22"
 							fill="currentColor"
 							className="bi bi-github hover:fill-sky-300"
 							viewBox="0 0 16 16"
@@ -59,8 +61,8 @@ export default function IntroSection() {
 					<a className={''} href={'mailto:info@team114.org'}>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
-							width="36"
-							height="36"
+							width="22"
+							height="22"
 							fill="currentColor"
 							className="bi bi-envelope hover:fill-sky-300"
 							viewBox="0 0 16 16"
@@ -69,6 +71,11 @@ export default function IntroSection() {
 						</svg>
 					</a>
 				</div>
+				</div>
+				<a href={'/sponsors'} className={'mt-8 px-8 py-3 rounded-full bg-white text-blue-700 font-semibold hover:bg-blue-100 transition-colors'}>
+					Support Us
+				</a>
+				<Stats />
 			</div>
 		</main>
 	);

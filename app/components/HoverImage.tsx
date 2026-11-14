@@ -33,7 +33,7 @@ export default function HoverImage({
             <Image
                 fill={true}
                 src={image_hover || image_default}
-                loading="eager"
+                sizes="(max-width: 768px) 100vw, 33vw"
                 alt={name}
                 className={"object-cover"}
                 quality={85}
@@ -42,7 +42,7 @@ export default function HoverImage({
             <Image
                 fill={true}
                 src={image_default}
-                loading="eager"
+                sizes="(max-width: 768px) 100vw, 33vw"
                 alt={name}
                 className={"object-cover transition-opacity duration-300 opacity-100 group-hover:opacity-0"}
                 quality={85}
