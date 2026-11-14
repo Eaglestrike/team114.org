@@ -5,18 +5,18 @@ interface person {
 }
 
 const captains = [
-	{ image_default: '/team_pics/leads/alan_normal.jpg', image_hover: '/team_pics/leads/alan_114.jpg', name: 'Alan Chen', zoom: 1.15, y: 100 },
-	{ image_default: '/team_pics/leads/rayhan_normal.jpg', image_hover: '/team_pics/leads/rayhan_114.jpg', name: 'Rayhan Merchant' },
-	{ image_default: '/team_pics/leads/riya_normal.jpg', image_hover: '/team_pics/leads/riya_114.jpg', name: 'Riya Mehrotra', zoom: 1.15, y: 100 }
+	{ image_default: '/team_pics/leads/alan_normal.jpg', image_hover: '/team_pics/leads/alan_114.jpg', name: 'Alan Chen', zoom: 1.05, y: 60 },
+	{ image_default: '/team_pics/leads/rayhan_normal.jpg', image_hover: '/team_pics/leads/rayhan_114.jpg', name: 'Rayhan Merchant', zoom: 1.05, y: 70 },
+	{ image_default: '/team_pics/leads/riya_normal.jpg', image_hover: '/team_pics/leads/riya_114.jpg', name: 'Riya Mehrotra', zoom: 1.05, y: 60 }
 ];
 
 const leads = [
 	{ image_default: '/team_pics/leads/emma_normal.jpg', image_hover: '/team_pics/leads/emma_114.jpg', role: 'Scouting and Strategy Lead', name: 'Emma Lu' },
-	{ image_default: '/team_pics/leads/theo_normal.jpg', image_hover: '/team_pics/leads/theo_114.jpg', role: 'CAD Lead', name: 'Theo Wolter' },
-	{ image_default: '/team_pics/leads/maximus_normal.jpg', image_hover: '/team_pics/leads/maximus_114.jpg', role: 'Code Lead', name: 'Maximus Zhang' },
+	{ image_default: '/team_pics/leads/theo_normal.jpg', image_hover: '/team_pics/leads/theo_114.jpg', role: 'CAD Lead', name: 'Theo Wolter', zoom: 1.03, y: 0 },
+	{ image_default: '/team_pics/leads/maximus_normal.jpg', image_hover: '/team_pics/leads/maximus_114.jpg', role: 'Code Lead', name: 'Maximus Zhang', zoom: 1.05, y: 100 },
 	{ image_default: '/team_pics/leads/ethan_normal.jpg', image_hover: '/team_pics/leads/ethan_114.jpg', role: 'Organization Lead', name: 'Ethan Chiang' },
 	{ image_default: '/team_pics/leads/ayaan_normal.jpg', image_hover: '/team_pics/leads/ayaan_114.jpg', role: 'Machining Lead', name: 'Ayaan Dwivedi' },
-	{ image_default: '/team_pics/leads/ananda_normal.jpg', image_hover: '/team_pics/leads/ananda_114.jpg', role: 'Business and Media Lead', name: 'Ananda Jauhar', zoom: 1.15, y: 100 },
+	{ image_default: '/team_pics/leads/ananda_normal.jpg', image_hover: '/team_pics/leads/ananda_114.jpg', role: 'Business and Media Lead', name: 'Ananda Jauhar', zoom: 1.05, y: 40 },
 	{ image_default: '/team_pics/leads/ricky_normal.jpg', image_hover: '/team_pics/leads/ricky_114.jpg', role: 'Assembly Lead', name: 'Ricky Zhao' },
 	{ image_default: '/team_pics/leads/ishika_normal.jpg', image_hover: '/team_pics/leads/ishika_114.jpg', role: 'Electrical Lead', name: 'Ishika Anand' },
 	{ image_default: '', image_hover: '', role: 'Prototyping Lead', name: 'Ethan Huang' },
