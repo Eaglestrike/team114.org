@@ -29,6 +29,8 @@ export default function Meet() {
                                         image_default = {captain.image_default}
                                         image_hover = {captain.image_hover}
                                         name={captain.name}
+                                        zoom={captain.zoom}
+                                        y={captain.y}
                                     />
                                 </div>
                                 <div className="p-5">
@@ -59,6 +61,8 @@ export default function Meet() {
                                         image_default = {lead.image_default}
                                         image_hover = {lead.image_hover}
                                         name={lead.name}
+                                        zoom={lead.zoom}
+                                        y={lead.y}
                                     />
                                 </div>
                                 <div className="p-4">
