@@ -93,6 +93,10 @@ export default function Meet() {
                                         image_default={mentor.image_default}
                                         image_hover={mentor.image_hover}
                                         name={mentor.name}
+                                        zoom={mentor.zoom}
+                                        y={mentor.y}
+                                        zoomHover={mentor.zoomHover}
+                                        yHover={mentor.yHover}
                                     />
                                 </div>
                                 <div className="flex flex-col justify-center p-6 md:p-10">

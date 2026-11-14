@@ -25,11 +25,11 @@ const leads = [
 
 const mentors = [
 	{ image_default: '/team_pics/mentors/mrhine_normal.jpg', image_hover: '/team_pics/mentors/mrhine_silly.jpg', name: 'Stephen Hine', description: 'Teacher at Los Altos High School since 2015<br>Teaches Robotics I and II<br>Mentor since 2017' },
-	{ image_default: '/team_pics/mentors/ryan_normal.jpg', image_hover: '/team_pics/mentors/ryan_silly.jpg', name: 'Ryan Cardono', description: 'Works at Tesla<br>Team 114 member in 2018<br>Mentor since 2021' },
-	{ image_default: '/team_pics/mentors/douglas_normal.jpg', image_hover: '/team_pics/mentors/douglas_silly.jpg', name: 'Douglas McCluer', description: 'System administrator at Veterans Affair Medical Center<br>Freelance sales representative<br>Mentor since 2023' },
+	{ image_default: '/team_pics/mentors/ryan_normal.jpg', image_hover: '/team_pics/mentors/ryan_silly.jpg', name: 'Ryan Cardono', description: 'Works at Tesla<br>Team 114 member in 2018<br>Mentor since 2021', zoomHover: 1.08 },
+	{ image_default: '/team_pics/mentors/douglas_normal.jpg', image_hover: '/team_pics/mentors/douglas_silly.jpg', name: 'Douglas McCluer', description: 'System administrator at Veterans Affair Medical Center<br>Freelance sales representative<br>Mentor since 2023', zoom: 1.18, y: 0 },
 	{ image_default: '', image_hover: '', name: 'James Fry', description: 'Works at Beam On<br>Team 114 member from 2001-2002<br>Mentor since 2006' },
-	{ image_default: '/team_pics/mentors/manildi_normal.jpg', image_hover: '/team_pics/mentors/manildi_silly.jpg', name: 'Joseph Manildi', description: 'Teacher at Los Altos High School<br>Teaches AP Environmental Science and Engineering<br>With the team since 2025' },
-	{ image_default: '/team_pics/mentors/mrshine_normal.jpg', image_hover: '/team_pics/mentors/mrshine_silly.jpg', name: 'Kelsey Ayers', description: "Works at Standford Hospital as a physician's associate<br>Chaperone since 2025" }
+	{ image_default: '/team_pics/mentors/manildi_normal.jpg', image_hover: '/team_pics/mentors/manildi_silly.jpg', name: 'Joseph Manildi', description: 'Teacher at Los Altos High School<br>Teaches AP Environmental Science and Engineering<br>With the team since 2025', zoom: 1.28, y: 15, zoomHover: 1, yHover: 50 },
+	{ image_default: '/team_pics/mentors/mrshine_normal.jpg', image_hover: '/team_pics/mentors/mrshine_silly.jpg', name: 'Kelsey Ayers', description: "Works at Standford Hospital as a physician's associate<br>Chaperone since 2025", zoomHover: 1.3, yHover: 3 }
 ]
 
 export { captains, leads, mentors};
