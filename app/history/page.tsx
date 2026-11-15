@@ -1,75 +1,113 @@
-import Pardon from '@/app/components/Pardon';
+import React from "react";
 import Image from "next/image"
 
 import Link from "next/link";
 
-function FeatureCard({ icon, title, description }: {
-    icon: React.ReactNode; title: string; description: React.ReactNode
-}) {
-    return (
-        //<div className="max-w-xl mx-auto bg-slate-800 p-6 rounded-2xl shadow-md border border-slate-700 transition-all duration-300 hover:shadow-lg hover:shadow-blue-900/20 hover:border-blue-500" >
-        <div className="max-w-xl mx-auto bg-slate-800 p-6 rounded-2xl shadow-md border border-slate-700" >
-            <div className="text-blue-400 mb-4 flex justify-center">{icon}</div>
-            <h3 className="text-lg font-bold text-white mb-2 text-center">{title}</h3>
-            <div className="text-gray-300 text-center">{description}</div>
-        </div>
-    )
-}
+type Robot = {
+    name: string;
+    image: string;
+    highlights?: React.ReactNode;
+};
 
+type Season = {
+    year: number;
+    game: string;
+    // Game logo, plus the optional "presented by" sponsor line shown smaller underneath
+    logo: { src: string; width: number; height: number };
+    sponsor?: { src: string; width: number; height: number; alt: string };
+    robots: Robot[];
+};
+
+// Add a new season (or another robot for a season) here.
+const seasons: Season[] = [
+    {
+        year: 2024,
+        game: 'CRESCENDO presented by Haas',
+        logo: { src: '/crescendo_wordmark.png', width: 1400, height: 561 },
+        sponsor: { src: '/crescendo_haas.png', width: 621, height: 106, alt: 'Presented by Haas' },
+        robots: [
+            {
+                name: 'Snoopy',
+                image: '/robot shadow.png',
+                highlights: (
+                    <span>
+                        #1 Rank at{' '}
+                        <Link href="https://www.thebluealliance.com/event/2024casf" className="text-blue-400 hover:text-blue-300 hover:underline">
+                            SFR
+                        </Link>{' '}
+                        &{' '}
+                        <Link href="https://www.thebluealliance.com/event/2024idbo" className="text-blue-400 hover:text-blue-300 hover:underline">
+                            Idaho
+                        </Link>
+                    </span>
+                ),
+            },
+        ],
+    },
+];
 
 export default function HistoryPage() {
     return (
-        <div className="bg-slate-900">
-            <div className="h-24"></div>
-            <div className="flex flex-col items-center px-4 pb-8 pt-2">
-                {/* Official CRESCENDO logo from the FRC style guide; keep its white background and Haas lockup */}
-                <div className="w-full max-w-md rounded-2xl bg-white p-4">
-                    <Image
-                        src="/crescendo_logo.png"
-                        alt="CRESCENDO presented by Haas"
-                        width={1400}
-                        height={713}
-                        className="h-auto w-full"
-                        priority
-                    />
+        <div className="bg-slate-900 min-h-screen py-16 px-4 md:px-8">
+            <div className="max-w-6xl mx-auto">
+                <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-bold mb-16 border-b border-slate-700 pb-6">
+                    History
+                </h1>
+
+                <div className="flex flex-col gap-16">
+                    {seasons.map((season) => (
+                        <section key={season.year} className="bg-slate-800 rounded-xl shadow-lg p-6 md:p-10">
+                            <div className="flex flex-col items-center">
+                                <Image
+                                    src={season.logo.src}
+                                    alt={season.game}
+                                    width={season.logo.width}
+                                    height={season.logo.height}
+                                    className="h-auto w-full max-w-2xl"
+                                    priority
+                                />
+                                <div className="mt-3 flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
+                                    <p className="text-white font-bold uppercase tracking-[0.15em] text-[10px] md:text-xs">{season.year} Season</p>
+                                    {season.sponsor && (
+                                        <>
+                                            <span className="text-slate-500" aria-hidden>·</span>
+                                            <Image
+                                                src={season.sponsor.src}
+                                                alt={season.sponsor.alt}
+                                                width={season.sponsor.width}
+                                                height={season.sponsor.height}
+                                                className="h-auto w-40 md:w-48"
+                                            />
+                                        </>
+                                    )}
+                                </div>
+                            </div>
+
+                            <div className="mt-10 flex flex-wrap justify-center gap-6 md:gap-8">
+                                {season.robots.map((robot) => (
+                                    <div
+                                        key={robot.name}
+                                        className="w-full md:w-[calc(50%-1rem)] bg-slate-900 rounded-xl overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-[1.02] hover:shadow-sky-900/20 hover:shadow-xl"
+                                    >
+                                        <div className="relative aspect-square bg-slate-950">
+                                            <Image
+                                                src={robot.image}
+                                                alt={`${robot.name} - our ${season.year} robot`}
+                                                fill
+                                                sizes="(max-width: 768px) 100vw, 50vw"
+                                                className="object-contain"
+                                            />
+                                        </div>
+                                        <div className="p-5 text-center">
+                                            <h3 className="text-white text-2xl font-semibold">{robot.name}</h3>
+                                            {robot.highlights && <p className="text-slate-400 mt-1">{robot.highlights}</p>}
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </section>
+                    ))}
                 </div>
-                <p className="mt-3 text-2xl font-semibold text-white">2024</p>
-            </div>
-            <div className="relative aspect-video max-w-3xl mx-auto mb-16">
-                <div className="relative h-full w-full overflow-hidden rounded-3xl border-2 border-slate-700">
-                    <Image
-                        src="/robot shadow.png"
-                        alt="Snoopy - Our 2024 Robot"
-                        fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        className="object-contain"
-                    />
-                </div>
-            </div>
-            <div className="pb-16">
-                <FeatureCard
-                    icon={<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-trophy" viewBox="0 0 16 16">
-                        <path d="M2.5.5A.5.5 0 0 1 3 0h10a.5.5 0 0 1 .5.5q0 .807-.034 1.536a3 3 0 1 1-1.133 5.89c-.79 1.865-1.878 2.777-2.833 3.011v2.173l1.425.356c.194.048.377.135.537.255L13.3 15.1a.5.5 0 0 1-.3.9H3a.5.5 0 0 1-.3-.9l1.838-1.379c.16-.12.343-.207.537-.255L6.5 13.11v-2.173c-.955-.234-2.043-1.146-2.833-3.012a3 3 0 1 1-1.132-5.89A33 33 0 0 1 2.5.5m.099 2.54a2 2 0 0 0 .72 3.935c-.333-1.05-.588-2.346-.72-3.935m10.083 3.935a2 2 0 0 0 .72-3.935c-.133 1.59-.388 2.885-.72 3.935M3.504 1q.01.775.056 1.469c.13 2.028.457 3.546.87 4.667C5.294 9.48 6.484 10 7 10a.5.5 0 0 1 .5.5v2.61a1 1 0 0 1-.757.97l-1.426.356a.5.5 0 0 0-.179.085L4.5 15h7l-.638-.479a.5.5 0 0 0-.18-.085l-1.425-.356a1 1 0 0 1-.757-.97V10.5A.5.5 0 0 1 9 10c.516 0 1.706-.52 2.57-2.864.413-1.12.74-2.64.87-4.667q.045-.694.056-1.469z" />
-                    </svg>}
-                    title="#1 Rank"
-                    description={
-                        <div className="flex justify-center space-x-2">
-                            <Link
-                                href="https://www.thebluealliance.com/event/2024casf"
-                                className="text-blue-400 hover:text-blue-300 hover:underline"
-                            >
-                                SFR
-                            </Link>
-                            <span>&</span>
-                            <Link
-                                href="https://www.thebluealliance.com/event/2024idbo"
-                                className="text-blue-400 hover:text-blue-300 hover:underline"
-                            >
-                                Idaho
-                            </Link>
-                        </div>
-                    }
-                />
             </div>
         </div>
     );
