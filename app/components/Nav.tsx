@@ -40,7 +40,7 @@ export default function Nav() {
 				<a href="/about" className={'hover:text-blue-300 hover:font-extrabold'}>
 					About
 				</a>
-				<a href="/snoopy" className={'hover:text-blue-300 hover:font-extrabold'}>
+				<a href="/history" className={'hover:text-blue-300 hover:font-extrabold'}>
 					History
 				</a>
 				<a href="/sponsors" className={'hover:text-blue-300 hover:font-extrabold'}>

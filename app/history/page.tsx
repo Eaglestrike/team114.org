@@ -17,11 +17,24 @@ function FeatureCard({ icon, title, description }: {
 }
 
 
-export default function SnoopyPage() {
+export default function HistoryPage() {
     return (
         <div className="bg-slate-900">
             <div className="h-24"></div>
-            <h2 className="text-5xl font-semibold text-white text-center pb-8 pt-2">Crescendo - 2024</h2>
+            <div className="flex flex-col items-center px-4 pb-8 pt-2">
+                {/* Official CRESCENDO logo from the FRC style guide; keep its white background and Haas lockup */}
+                <div className="w-full max-w-md rounded-2xl bg-white p-4">
+                    <Image
+                        src="/crescendo_logo.png"
+                        alt="CRESCENDO presented by Haas"
+                        width={1400}
+                        height={713}
+                        className="h-auto w-full"
+                        priority
+                    />
+                </div>
+                <p className="mt-3 text-2xl font-semibold text-white">2024</p>
+            </div>
             <div className="relative aspect-video max-w-3xl mx-auto mb-16">
                 <div className="relative h-full w-full overflow-hidden rounded-3xl border-2 border-slate-700">
                     <Image
