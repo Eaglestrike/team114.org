@@ -4,7 +4,8 @@ interface Sponsor {
 	website: string;
 }
 
-const partners: Sponsor[] = [
+// Gold: $5000 or more
+const goldSponsors: Sponsor[] = [
 	{
 		name: 'Google',
 		logo: 'google.png',
@@ -32,7 +33,8 @@ const partners: Sponsor[] = [
 	},
 ];
 
-const goldSponsors: Sponsor[] = [
+// Silver: $2000 - $4999
+const silverSponsors: Sponsor[] = [
 	// {
 	// 	name: 'Lockheed Martin',
 	// 	logo: 'lockheed.png',
@@ -55,15 +57,13 @@ const goldSponsors: Sponsor[] = [
 	// },
 ];
 
-const silverSponsors: Sponsor[] = [
+// Bronze: up to $2000 (in-kind donations count by their dollar value)
+const bronzeSponsors: Sponsor[] = [
 	// {
 	// 	name: 'Joyson Electronics',
 	// 	logo: 'joyson.png',
 	// 	website: 'https://www.joyson.cn/en/index.php',
 	// },
-];
-
-const bronzeSponsors: Sponsor[] = [
 	// {
 	// 	name: 'Intuitive',
 	// 	logo: 'intuitive.png',
@@ -74,9 +74,7 @@ const bronzeSponsors: Sponsor[] = [
 	// 	logo: 'pge.webp',
 	// 	website: 'https://www.pge.com/',
 	// },
-];
-
-const inKindSponsors: Sponsor[] = [
+	// In-kind sponsors are placed by the value of their donation
 	{
 		name: 'Beam On',
 		logo: 'beamon.png',
@@ -109,4 +107,5 @@ const inKindSponsors: Sponsor[] = [
 	// },
 ];
 
-export { partners, goldSponsors, silverSponsors, bronzeSponsors, inKindSponsors };
+
+export { goldSponsors, silverSponsors, bronzeSponsors };

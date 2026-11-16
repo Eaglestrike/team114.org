@@ -1,7 +1,29 @@
 "use client"
 import Image from "next/image"
 import Link from "next/link"
-import { bronzeSponsors, goldSponsors, inKindSponsors, partners, silverSponsors } from "@/app/data/sponsorsData"
+import { bronzeSponsors, goldSponsors, silverSponsors } from "@/app/data/sponsorsData"
+
+// Tiers from the Eaglestrike Sponsorship Package (public/eaglestrike_sponsorship_package.pdf)
+const tiers = [
+    {
+        id: "gold",
+        title: "Gold ($5000 or more)",
+        colorClass: "text-yellow-500",
+        sponsors: goldSponsors,
+    },
+    {
+        id: "silver",
+        title: "Silver ($2000 - $5000)",
+        colorClass: "text-gray-400",
+        sponsors: silverSponsors,
+    },
+    {
+        id: "bronze",
+        title: "Bronze (up to $2000)",
+        colorClass: "text-amber-600",
+        sponsors: bronzeSponsors,
+    },
+]
 
 function SectionTitle({ title, colorClass }: { title: string; colorClass: string }) {
     return (
@@ -18,7 +40,7 @@ function SponsorCard({
     size = "medium",
 }: {
     sponsor: { name: string; logo: string; website: string }
-    tier: "partner" | "gold" | "silver" | "bronze" | "inkind"
+    tier: "partner" | "gold" | "silver" | "bronze"
     size?: "small" | "medium" | "large"
 }) {
     const tierStyles = {
@@ -41,11 +63,6 @@ function SponsorCard({
             border: "hover:border-amber-600",
             scale: "hover:scale-105",
             bgHover: "hover:bg-amber-50",
-        },
-        inkind: {
-            border: "hover:border-gray-400",
-            scale: "hover:scale-105",
-            bgHover: "hover:bg-gray-50",
         },
     }
 
@@ -93,63 +110,30 @@ export default function SponsorsPage() {
                         <p className="text-center text-white text-lg">
                             Interested in becoming a sponsor?{" "}
                             <a
-                                href="https://docs.google.com/document/d/1bZPDlrVWRtjtCxCHdrQo8Cva77OVnZ_W/edit"
+                                href="/eaglestrike_sponsorship_package.pdf"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="underline font-medium transition-colors text-white hover:text-gray-200"
                             >
-                                Read our Sponsorship Prospectus
+                                Read our Sponsorship Package
                             </a>
                         </p>
                     </div>
                 </div>
-                <section className="mb-16" id="partners">
-                    <SectionTitle title="Partners ($5000+)" colorClass="text-rose-600" />
-                    {partners ?
-                        (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                        {partners.map((partner) => (
-                            <SponsorCard key={partner.name} sponsor={partner} tier="partner" size="large" />
-                        ))}
-                    </div>) : (<text className={"text-white text-3xl font-bold"}>Become the first Partner Today!</text>)}
-                </section>
-                <section className="mb-16" id="gold">
-                    <SectionTitle title="Gold ($2500-$4999)" colorClass="text-yellow-500" />
-                    {goldSponsors && goldSponsors.length ?
-                        (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                            {goldSponsors.map((partner) => (
-                                <SponsorCard key={partner.name} sponsor={partner} tier="partner" size="large" />
-                            ))}
-                        </div>)
-                        :
-                        (<text className={"text-white text-3xl font-bold"}>Become the first Gold Sponsor Today!</text>)}
-                </section>
-                <section className="mb-16" id="silver">
-                    <SectionTitle title="Silver ($1000-$2499)" colorClass="text-gray-400" />
-                    {silverSponsors && silverSponsors.length ?
-                        (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                            {silverSponsors.map((partner) => (
-                                <SponsorCard key={partner.name} sponsor={partner} tier="partner" size="large" />
-                            ))}
-                        </div>) : (<text className={"text-white text-3xl font-bold"}>Become the first Silver Sponsor Today!</text>)}
-                </section>
-                <section className="mb-16" id="bronze">
-                    <SectionTitle title="Bronze ($0-$1000)" colorClass="text-amber-600" />
-                    {bronzeSponsors && bronzeSponsors.length ?
-                        (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                            {bronzeSponsors.map((partner) => (
-                                <SponsorCard key={partner.name} sponsor={partner} tier="partner" size="large" />
-                            ))}
-                        </div>) : (<text className={"text-white text-3xl font-bold"}>Become the first Bronze Sponsor Today!</text>)}
-                </section>
-                <section className="mb-16" id="in-kind">
-                    <SectionTitle title="In-Kind Sponsors" colorClass="text-gray-400" />
-                    {inKindSponsors && inKindSponsors.length ?
-                        (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                            {inKindSponsors.map((partner) => (
-                                <SponsorCard key={partner.name} sponsor={partner} tier="partner" size="large" />
-                            ))}
-                        </div>) : (<text className={"text-white text-3xl font-bold"}>Become the first in kind Sponsor Today!</text>)}
-                </section>
+                {tiers.map((tier) => (
+                    <section className="mb-16" id={tier.id} key={tier.id}>
+                        <SectionTitle title={tier.title} colorClass={tier.colorClass} />
+                        {tier.sponsors.length ? (
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                                {tier.sponsors.map((sponsor) => (
+                                    <SponsorCard key={sponsor.name} sponsor={sponsor} tier={tier.id as "gold" | "silver" | "bronze"} size="large" />
+                                ))}
+                            </div>
+                        ) : (
+                            <p className="text-white text-3xl font-bold">Become our first {tier.title.split(" ")[0]} Sponsor today!</p>
+                        )}
+                    </section>
+                ))}
             </div>
         </div>
     )
