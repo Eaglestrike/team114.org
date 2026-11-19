@@ -5,7 +5,7 @@ import Link from "next/link";
 
 type Robot = {
     name: string;
-    image: string;
+    image?: string; // leave out to show a blank placeholder
     highlights?: React.ReactNode;
 };
 
@@ -20,6 +20,37 @@ type Season = {
 
 // Add a new season (or another robot for a season) here.
 const seasons: Season[] = [
+    {
+        year: 2026,
+        game: 'REBUILT presented by Haas',
+        logo: { src: '/rebuilt_wordmark.png', width: 1400, height: 353 },
+        sponsor: { src: '/rebuilt_haas.png', width: 879, height: 149, alt: 'Presented by Haas' },
+        robots: [
+            {
+                name: 'Inertia',
+                image: '/inertia_red.png',
+                highlights: (
+                    <span>
+                        Finalist at{' '}
+                        <Link href="https://www.thebluealliance.com/team/114/2026" className="text-blue-400 hover:text-blue-300 hover:underline">
+                            SF District
+                        </Link>{' '}
+                        · 2× Autonomous Award
+                    </span>
+                ),
+            },
+        ],
+    },
+    {
+        year: 2025,
+        game: 'REEFSCAPE presented by Haas',
+        logo: { src: '/reefscape_wordmark.png', width: 1400, height: 302 },
+        sponsor: { src: '/reefscape_haas.png', width: 845, height: 143, alt: 'Presented by Haas' },
+        robots: [
+            // TODO: add Theseus's photo, e.g. image: '/theseus.png'
+            { name: 'Theseus' },
+        ],
+    },
     {
         year: 2024,
         game: 'CRESCENDO presented by Haas',
@@ -83,6 +114,7 @@ export default function HistoryPage() {
                                 </div>
                             </div>
 
+                            {season.robots.length > 0 && (
                             <div className="mt-10 flex flex-wrap justify-center gap-6 md:gap-8">
                                 {season.robots.map((robot) => (
                                     <div
@@ -90,6 +122,7 @@ export default function HistoryPage() {
                                         className="w-full md:w-[calc(50%-1rem)] bg-slate-900 rounded-xl overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-[1.02] hover:shadow-sky-900/20 hover:shadow-xl"
                                     >
                                         <div className="relative aspect-square bg-slate-950">
+                                            {robot.image && (
                                             <Image
                                                 src={robot.image}
                                                 alt={`${robot.name} - our ${season.year} robot`}
@@ -97,6 +130,7 @@ export default function HistoryPage() {
                                                 sizes="(max-width: 768px) 100vw, 50vw"
                                                 className="object-contain"
                                             />
+                                            )}
                                         </div>
                                         <div className="p-5 text-center">
                                             <h3 className="text-white text-2xl font-semibold">{robot.name}</h3>
@@ -105,6 +139,7 @@ export default function HistoryPage() {
                                     </div>
                                 ))}
                             </div>
+                            )}
                         </section>
                     ))}
                 </div>
