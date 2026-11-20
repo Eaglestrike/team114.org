@@ -47,8 +47,7 @@ const seasons: Season[] = [
         logo: { src: '/reefscape_wordmark.png', width: 1400, height: 302 },
         sponsor: { src: '/reefscape_haas.png', width: 845, height: 143, alt: 'Presented by Haas' },
         robots: [
-            // TODO: add Theseus's photo, e.g. image: '/theseus.png'
-            { name: 'Theseus' },
+            { name: 'Theseus', image: '/theseus.webp' },
         ],
     },
     {
