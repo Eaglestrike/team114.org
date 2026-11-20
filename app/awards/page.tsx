@@ -164,19 +164,11 @@ const awardHistory: AwardYear[] = [
 
 export default function AwardsPage() {
 	return (
-		<main className="min-h-screen bg-slate-900 px-4 pb-24 pt-24 text-white sm:px-6 lg:px-8">
+		<main className="min-h-screen bg-slate-900 px-4 py-16 text-white md:px-8">
 			<div className="mx-auto max-w-6xl">
-				<header className="border-b border-slate-700 pb-10">
-					<p className="mb-3 text-sm font-semibold uppercase tracking-[0.18em] text-blue-400">
-						Team 114 · Eaglestrike
-					</p>
-					<h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-						Awards &amp; Distinctions
-					</h1>
-					<p className="mt-5 max-w-3xl text-lg leading-8 text-slate-300">
-						Competition results and judged awards earned by Eaglestrike teams and students.
-					</p>
-				</header>
+				<h1 className="mb-16 border-b border-slate-700 pb-6 text-4xl font-bold md:text-5xl lg:text-6xl">
+					Awards &amp; Distinctions
+				</h1>
 
 				<div className="divide-y divide-slate-700/80">
 					{awardHistory.map(({ year, events }) => (
