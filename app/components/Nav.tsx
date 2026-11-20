@@ -30,8 +30,8 @@ export default function Nav() {
 		>
 			<nav
 				className={
-					'flex flex-row grow justify-end gap-x-5  p-4 bg-slate-800 bg-opacity-95  border-slate-400' +
-					'uppercase text-white font-semibold'
+					'flex flex-row grow justify-center gap-x-3 px-3 py-4 bg-slate-800 bg-opacity-95 border-slate-400 ' +
+					'uppercase text-white text-xs sm:text-base font-semibold sm:justify-end sm:gap-x-5 sm:px-4'
 				}
 			>
 				<a href="/" className={'hover:text-sky-300 hover:font-extrabold hover:drop-shadow-lg'}>
@@ -42,6 +42,9 @@ export default function Nav() {
 				</a>
 				<a href="/history" className={'hover:text-blue-300 hover:font-extrabold'}>
 					History
+				</a>
+				<a href="/awards" className={'hover:text-blue-300 hover:font-extrabold'}>
+					Awards
 				</a>
 				<a href="/sponsors" className={'hover:text-blue-300 hover:font-extrabold'}>
 					Sponsors

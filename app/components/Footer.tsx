@@ -34,6 +34,8 @@ export default function Footer() {
 						<h3 className="text-xl font-semibold mb-4 text-white">Quick Links</h3>
 						<ul className="space-y-2">
 							<FooterLink href="/about">About Us</FooterLink>
+							<FooterLink href="/history">Robot History</FooterLink>
+							<FooterLink href="/awards">Awards &amp; Distinctions</FooterLink>
 							<FooterLink href="/sponsors">Our Sponsors</FooterLink>
 							{/* <FooterLink href="/team">Our Team</FooterLink> */}
 							{/* <FooterLink href="/resources">Resources</FooterLink> */}
