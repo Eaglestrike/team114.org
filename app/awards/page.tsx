@@ -164,7 +164,7 @@ const awardHistory: AwardYear[] = [
 
 export default function AwardsPage() {
 	return (
-		<main className="min-h-screen bg-slate-900 px-4 py-16 text-white md:px-8">
+		<main className="min-h-screen bg-slate-900 px-4 py-24 text-white md:px-8">
 			<div className="mx-auto max-w-6xl">
 				<h1 className="mb-16 border-b border-slate-700 pb-6 text-4xl font-bold md:text-5xl lg:text-6xl">
 					Awards &amp; Distinctions

@@ -4,7 +4,7 @@ import Stats from '@/app/components/Stats';
 
 export default function IntroSection() {
 	return (
-		<main className={'bg-blue-500/70 py-16 md:py-24 pb-10 text-white'}>
+		<main className={'bg-blue-500/70 pt-24 pb-10 text-white'}>
 			<div className={'flex flex-col items-center w-full'}>
 				<Image src={'/eagle.png'} alt={'Eagle'} width={300} height={300} />
 				<div className={'inline-flex flex-col'}>
