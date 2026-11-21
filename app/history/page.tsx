@@ -114,7 +114,7 @@ export default function HistoryPage() {
                             </div>
 
                             {season.robots.length > 0 && (
-                            <div className="mt-10 flex flex-wrap justify-center gap-6 md:gap-8">
+                            <div className={`${season.year === 2025 ? 'mt-16 md:mt-20' : 'mt-10'} flex flex-wrap justify-center gap-6 md:gap-8`}>
                                 {season.robots.map((robot) => (
                                     <div
                                         key={robot.name}
