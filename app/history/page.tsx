@@ -6,6 +6,7 @@ import Link from "next/link";
 type Robot = {
     name: string;
     image?: string; // leave out to show a blank placeholder
+    imageInsetTop?: boolean;
     highlights?: React.ReactNode;
 };
 
@@ -47,8 +48,7 @@ const seasons: Season[] = [
         logo: { src: '/reefscape_wordmark.png', width: 1400, height: 302 },
         sponsor: { src: '/reefscape_haas.png', width: 845, height: 143, alt: 'Presented by Haas' },
         robots: [
-            // TODO: add Theseus's photo, e.g. image: '/theseus.png'
-            { name: 'Theseus' },
+            { name: 'Theseus', image: '/theseus.webp', imageInsetTop: true },
         ],
     },
     {
@@ -79,7 +79,7 @@ const seasons: Season[] = [
 
 export default function HistoryPage() {
     return (
-        <div className="bg-slate-900 min-h-screen py-16 px-4 md:px-8">
+        <div className="bg-slate-900 min-h-screen py-24 px-4 md:px-8">
             <div className="max-w-6xl mx-auto">
                 <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-bold mb-16 border-b border-slate-700 pb-6">
                     History
@@ -123,13 +123,15 @@ export default function HistoryPage() {
                                     >
                                         <div className="relative aspect-square bg-slate-950">
                                             {robot.image && (
-                                            <Image
-                                                src={robot.image}
-                                                alt={`${robot.name} - our ${season.year} robot`}
-                                                fill
-                                                sizes="(max-width: 768px) 100vw, 50vw"
-                                                className="object-contain"
-                                            />
+                                            <div className={`absolute inset-x-0 bottom-0 ${robot.imageInsetTop ? 'top-8 md:top-10' : 'top-0'}`}>
+                                                <Image
+                                                    src={robot.image}
+                                                    alt={`${robot.name} - our ${season.year} robot`}
+                                                    fill
+                                                    sizes="(max-width: 768px) 100vw, 50vw"
+                                                    className="object-contain"
+                                                />
+                                            </div>
                                             )}
                                         </div>
                                         <div className="p-5 text-center">
