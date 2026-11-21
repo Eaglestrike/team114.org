@@ -6,6 +6,7 @@ import Link from "next/link";
 type Robot = {
     name: string;
     image?: string; // leave out to show a blank placeholder
+    imageInsetTop?: boolean;
     highlights?: React.ReactNode;
 };
 
@@ -47,7 +48,7 @@ const seasons: Season[] = [
         logo: { src: '/reefscape_wordmark.png', width: 1400, height: 302 },
         sponsor: { src: '/reefscape_haas.png', width: 845, height: 143, alt: 'Presented by Haas' },
         robots: [
-            { name: 'Theseus', image: '/theseus.webp' },
+            { name: 'Theseus', image: '/theseus.webp', imageInsetTop: true },
         ],
     },
     {
@@ -114,7 +115,7 @@ export default function HistoryPage() {
                             </div>
 
                             {season.robots.length > 0 && (
-                            <div className={`${season.year === 2025 ? 'mt-16 md:mt-20' : 'mt-10'} flex flex-wrap justify-center gap-6 md:gap-8`}>
+                            <div className="mt-10 flex flex-wrap justify-center gap-6 md:gap-8">
                                 {season.robots.map((robot) => (
                                     <div
                                         key={robot.name}
@@ -122,13 +123,15 @@ export default function HistoryPage() {
                                     >
                                         <div className="relative aspect-square bg-slate-950">
                                             {robot.image && (
-                                            <Image
-                                                src={robot.image}
-                                                alt={`${robot.name} - our ${season.year} robot`}
-                                                fill
-                                                sizes="(max-width: 768px) 100vw, 50vw"
-                                                className="object-contain"
-                                            />
+                                            <div className={`absolute inset-x-0 bottom-0 ${robot.imageInsetTop ? 'top-8 md:top-10' : 'top-0'}`}>
+                                                <Image
+                                                    src={robot.image}
+                                                    alt={`${robot.name} - our ${season.year} robot`}
+                                                    fill
+                                                    sizes="(max-width: 768px) 100vw, 50vw"
+                                                    className="object-contain"
+                                                />
+                                            </div>
                                             )}
                                         </div>
                                         <div className="p-5 text-center">
